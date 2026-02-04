@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     public Vector2 moveInput;
+    // Speed of the player movement
     public float moveSpeed = 5f;
 
     void OnMove(InputValue value)
