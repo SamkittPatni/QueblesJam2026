@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 4553520890477811419}
   m_Layer: 0
   m_Name: NPC_2
-  m_TagString: Untagged
+  m_TagString: NPC2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

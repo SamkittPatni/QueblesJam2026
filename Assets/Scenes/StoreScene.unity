@@ -1078,6 +1078,7 @@ GameObject:
   - component: {fileID: 627488418}
   - component: {fileID: 627488420}
   - component: {fileID: 627488419}
+  - component: {fileID: 627488421}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1170,7 +1171,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &627488420
 BoxCollider2D:
@@ -1218,6 +1219,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.4436436, y: 2.4646413}
   m_EdgeRadius: 0
+--- !u!114 &627488421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 627488414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24d7c7ca27b56fb4b8639492afe7e0f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerInteract
 --- !u!1001 &639953858
 PrefabInstance:
   m_ObjectHideFlags: 0
