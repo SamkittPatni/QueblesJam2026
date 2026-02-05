@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
 
+        // Every time the scene loads, increment the week counter
         week++;
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created

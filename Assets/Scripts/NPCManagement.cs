@@ -5,10 +5,10 @@ public class NPCManagement : MonoBehaviour
 {
     public GameObject[] NPCs;
     private List<Vector3> NPCositions = new List<Vector3> {
-        new Vector3(1.26f, -2.79f, 0),
+        new Vector3(-2.3f, -2.25f, 0),
         new Vector3(-3.16f, 4.04f, 0),
-        new Vector3(9.02f, -4.45f, 0),
-        new Vector3(11.28f, -0.7f, 0),
+        new Vector3(7.9f, -4.39f, 0),
+        new Vector3(13.1f, -0.13f, 0),
         new Vector3(-10.28f, -3.96f, 0)
     };
     // Start is called once before the first execution of Update after the MonoBehaviour is created
