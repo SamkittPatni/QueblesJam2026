@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6595373025571848397}
   - component: {fileID: 8957991660944155309}
   - component: {fileID: 2548267699673763446}
+  - component: {fileID: 2966154541540448993}
   m_Layer: 0
   m_Name: Block
   m_TagString: Untagged
@@ -29,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -137,7 +138,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 19, y: 9}
   m_EdgeRadius: 0
 --- !u!50 &2548267699673763446
 Rigidbody2D:
@@ -166,3 +167,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!114 &2966154541540448993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6472068814302834249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f8b3d6bf223bbd4288322931801c3ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpriteChanger
+  tunaCanSprites:
+  - {fileID: 9117690807690944664, guid: da31d247a3ebf534599e345d0d28275c, type: 3}
+  - {fileID: 8349529881214796032, guid: 371264fa5d1769d46acbfafce3050948, type: 3}
+  - {fileID: 3027349980336094430, guid: f78f46e47e20a8c4a9659813c275df40, type: 3}
+  - {fileID: 4250262711290865845, guid: 2a837c64c93796741b3270a234970b79, type: 3}
+  newTunaCanSprite: {fileID: 0}

@@ -72,7 +72,7 @@ public class StackingGameManager : MonoBehaviour
         //create a block with the desired properties.
         currentBlock = Instantiate(blockPrefab, blockHolder);
         currentBlock.position = blockStartPosition;
-        currentBlock.GetComponent<SpriteRenderer>().color = Random.ColorHSV(); /// enable randomly coloured blocks
+        ///currentBlock.GetComponent<SpriteRenderer>().color = Random.ColorHSV(); /// enable randomly coloured blocks
         currentRigidbody = currentBlock.GetComponent<Rigidbody2D>();
         blockSpeed += blockSpeedIncrement;
 
