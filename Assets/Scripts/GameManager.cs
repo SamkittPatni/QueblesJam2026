@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
@@ -21,12 +22,19 @@ public class GameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        StartCoroutine(EndWeek());
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    private IEnumerator EndWeek()
+    {
+        yield return new WaitForSeconds(180f); // Wait for 60 seconds (1 minute)
+        Debug.Log("Week " + week + " ended. Trust: " + trust);
+        // Here you can add logic to transition to the next week, reset NPCs, etc.
     }
 }
