@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3a53256f8e1573d47affe941c1c54d80
+guid: 94900b0d5146e1c43846fc67d6dd1729
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5301562017186904361
-    second: D_sad_animated_0
+      213: 2291322345462905969
+    second: M_BackWalk_animated_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,12 +100,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: D_sad_animated_0
+      name: M_BackWalk_animated_0
       rect:
         serializedVersion: 2
-        x: 119
+        x: 409
         y: 0
-        width: 1810
+        width: 1230
         height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 929f025d09ee29940800000000000000
-      internalID: 5301562017186904361
+      spriteID: 17c3b3388896ccf10800000000000000
+      internalID: 2291322345462905969
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      D_sad_animated_0: 5301562017186904361
+      M_BackWalk_animated_0: 2291322345462905969
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

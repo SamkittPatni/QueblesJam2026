@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b01bc3bc96dcc8f49ad03bb553df9fdf
+guid: 727c39bb6f33abc42a60f4f5b53bc855
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3826233421675732859
-    second: E_happy_animated_0
+      213: 4871552482367254173
+    second: C_neural_animated_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,12 +100,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: E_happy_animated_0
+      name: C_neural_animated_0
       rect:
         serializedVersion: 2
-        x: 150
+        x: 240
         y: 0
-        width: 1748
+        width: 1568
         height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5806a49a9fc76eac0800000000000000
-      internalID: -3826233421675732859
+      spriteID: d9e2c201c2b3b9340800000000000000
+      internalID: 4871552482367254173
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      E_happy_animated_0: -3826233421675732859
+      C_neural_animated_0: 4871552482367254173
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
