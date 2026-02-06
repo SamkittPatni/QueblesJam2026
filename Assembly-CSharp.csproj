@@ -62,13 +62,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\PlayerInteractMaze.cs" />
+    <Compile Include="Assets\Scripts\CashierMiniGameInput.cs" />
     <Compile Include="Assets\Scripts\NPCManagement.cs" />
     <Compile Include="Assets\Scripts\CashierMiniGameObject.cs" />
     <Compile Include="Assets\Scripts\PlayerInteract.cs" />
     <Compile Include="Assets\Scripts\StackingGameScript.cs" />
     <Compile Include="Assets\Scripts\LoseLife.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Black.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\StackingWinning.cs" />
     <Compile Include="Assets\Scripts\SpriteChanger.cs" />
   </ItemGroup>
   <ItemGroup>
