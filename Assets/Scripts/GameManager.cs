@@ -33,8 +33,13 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator EndWeek()
     {
-        yield return new WaitForSeconds(180f); // Wait for 60 seconds (1 minute)
+        yield return new WaitForSeconds(180f); // Wait for 180 seconds (3 minute)
         Debug.Log("Week " + week + " ended. Trust: " + trust);
         // Here you can add logic to transition to the next week, reset NPCs, etc.
+    }
+
+    public void AddTrust(float amount)
+    {
+        trust += amount;
     }
 }
