@@ -25,7 +25,7 @@ public class MazeManager : MonoBehaviour
         else if (isComplete)
         {
             Debug.Log("Maze completed successfully!");
-            GameManager.Instance.trust += trustReward; // Reward trust points to the player
+            GameManager.Instance.AddTrust(trustReward); // Reward trust points to the player
         }
     }
 
