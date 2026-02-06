@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerInteractMaze : MonoBehaviour
 {
+    public GameObject mazeManager; // Reference to the MazeManager script
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -17,6 +18,7 @@ public class PlayerInteractMaze : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Collided with: " + collision.gameObject.name);
+        mazeManager.GetComponent<MazeManager>().CompleteMaze();
+        
     }
 }
