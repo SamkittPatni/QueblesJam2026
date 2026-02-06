@@ -1,18 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\aguan\\OneDrive\\Documents\\GitHub\\folder\\QueblesJam2026\\",
+  "WorkspaceRootPath": "C:\\Users\\aguan\\OneDrive\\Documents\\GitHub\\folder2\\QueblesJam2026\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1AEA0AF5-76BE-1611-3C83-8585D1D13140}|Assembly-CSharp.csproj|c:\\users\\aguan\\onedrive\\documents\\github\\folder\\queblesjam2026\\assets\\scripts\\stackingwinning.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AEA0AF5-76BE-1611-3C83-8585D1D13140}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\stackingwinning.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1AEA0AF5-76BE-1611-3C83-8585D1D13140}|Assembly-CSharp.csproj|C:\\Users\\aguan\\OneDrive\\Documents\\GitHub\\folder2\\QueblesJam2026\\assets\\scripts\\stackinggamescript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AEA0AF5-76BE-1611-3C83-8585D1D13140}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\stackinggamescript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1AEA0AF5-76BE-1611-3C83-8585D1D13140}|Assembly-CSharp.csproj|C:\\Users\\aguan\\OneDrive\\Documents\\GitHub\\folder\\QueblesJam2026\\assets\\scripts\\loselife.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1AEA0AF5-76BE-1611-3C83-8585D1D13140}|Assembly-CSharp.csproj|C:\\Users\\aguan\\OneDrive\\Documents\\GitHub\\folder2\\QueblesJam2026\\assets\\scripts\\loselife.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1AEA0AF5-76BE-1611-3C83-8585D1D13140}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\loselife.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1AEA0AF5-76BE-1611-3C83-8585D1D13140}|Assembly-CSharp.csproj|C:\\Users\\aguan\\OneDrive\\Documents\\GitHub\\folder\\QueblesJam2026\\assets\\scripts\\stackinggamescript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AEA0AF5-76BE-1611-3C83-8585D1D13140}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\stackinggamescript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1AEA0AF5-76BE-1611-3C83-8585D1D13140}|Assembly-CSharp.csproj|c:\\users\\aguan\\onedrive\\documents\\github\\folder2\\queblesjam2026\\assets\\scripts\\stackingwinning.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AEA0AF5-76BE-1611-3C83-8585D1D13140}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\stackingwinning.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,17 +22,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "StackingWinning.cs",
-              "DocumentMoniker": "C:\\Users\\aguan\\OneDrive\\Documents\\GitHub\\folder\\QueblesJam2026\\Assets\\Scripts\\StackingWinning.cs",
+              "DocumentMoniker": "C:\\Users\\aguan\\OneDrive\\Documents\\GitHub\\folder2\\QueblesJam2026\\Assets\\Scripts\\StackingWinning.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\StackingWinning.cs",
-              "ToolTip": "C:\\Users\\aguan\\OneDrive\\Documents\\GitHub\\folder\\QueblesJam2026\\Assets\\Scripts\\StackingWinning.cs",
+              "ToolTip": "C:\\Users\\aguan\\OneDrive\\Documents\\GitHub\\folder2\\QueblesJam2026\\Assets\\Scripts\\StackingWinning.cs",
               "RelativeToolTip": "Assets\\Scripts\\StackingWinning.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwCMAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-06T15:19:07.032Z",
               "EditorCaption": ""
@@ -41,25 +41,27 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "LoseLife.cs",
-              "DocumentMoniker": "C:\\Users\\aguan\\OneDrive\\Documents\\GitHub\\folder\\QueblesJam2026\\Assets\\Scripts\\LoseLife.cs",
+              "DocumentMoniker": "C:\\Users\\aguan\\OneDrive\\Documents\\GitHub\\folder2\\QueblesJam2026\\Assets\\Scripts\\LoseLife.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\LoseLife.cs",
-              "ToolTip": "C:\\Users\\aguan\\OneDrive\\Documents\\GitHub\\folder\\QueblesJam2026\\Assets\\Scripts\\LoseLife.cs",
+              "ToolTip": "C:\\Users\\aguan\\OneDrive\\Documents\\GitHub\\folder2\\QueblesJam2026\\Assets\\Scripts\\LoseLife.cs",
               "RelativeToolTip": "Assets\\Scripts\\LoseLife.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-06T15:13:08.374Z"
+              "WhenOpened": "2026-02-06T15:13:08.374Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "StackingGameScript.cs",
-              "DocumentMoniker": "C:\\Users\\aguan\\OneDrive\\Documents\\GitHub\\folder\\QueblesJam2026\\Assets\\Scripts\\StackingGameScript.cs",
+              "DocumentMoniker": "C:\\Users\\aguan\\OneDrive\\Documents\\GitHub\\folder2\\QueblesJam2026\\Assets\\Scripts\\StackingGameScript.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\StackingGameScript.cs",
-              "ToolTip": "C:\\Users\\aguan\\OneDrive\\Documents\\GitHub\\folder\\QueblesJam2026\\Assets\\Scripts\\StackingGameScript.cs",
+              "ToolTip": "C:\\Users\\aguan\\OneDrive\\Documents\\GitHub\\folder2\\QueblesJam2026\\Assets\\Scripts\\StackingGameScript.cs",
               "RelativeToolTip": "Assets\\Scripts\\StackingGameScript.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAowG8AAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAwwIAAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-06T14:56:03.137Z"
+              "WhenOpened": "2026-02-06T14:56:03.137Z",
+              "EditorCaption": ""
             }
           ]
         }

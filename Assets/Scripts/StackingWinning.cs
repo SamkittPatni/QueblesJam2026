@@ -15,7 +15,7 @@ public class StackingWinning : MonoBehaviour
         if (stabilityTimer >= requiredStabilityTime)
         {
             Debug.Log("Winner!");
-            gameManager.WinGame();
+            gameWon = true;
 
         }
 

@@ -11,6 +11,7 @@ public class StackingGameManager : MonoBehaviour
     [SerializeField] private Transform blockHolder;
 
     [SerializeField] private TMPro.TextMeshProUGUI livesText;
+    [SerializeField] private TMPro.TextMeshProUGUI timerText;
 
     /// <summary>
     ///  variables to handle the game state
@@ -18,6 +19,8 @@ public class StackingGameManager : MonoBehaviour
     private int startingLives = 3;
     private int livesRemaining;
     private bool playing = true;
+
+    private float stackingGameTimeLimit = 25f; /// 10f ~ 13 seconds
 
     public InputAction InputSystem_Actions;
     private void OnEnable()
@@ -58,6 +61,7 @@ public class StackingGameManager : MonoBehaviour
     private float xLimit = 5; ///block will know to reverse when x>5. block can extend over the edge,making game more interesting
     private float timeBetweenRounds = 1f;
 
+    private float startTime = 0f;
 
 
     void Start()
@@ -82,6 +86,20 @@ public class StackingGameManager : MonoBehaviour
     //update is called once per frame
     void Update()
     {
+        if (playing == true)
+        {
+            startTime += Time.deltaTime;
+            timerText.text = startTime.ToString("#.00");
+        }
+
+        if (startTime >= stackingGameTimeLimit && playing == true) 
+                {
+            playing = false;
+            Debug.Log("You ran out of time!");
+
+        }
+
+        ///startTime += Time.deltaTime;
         //if we have a waiting block, move it about.
         if (currentBlock && playing) /// added playing boolean - makes blocks stop spawning if game is over
         {
