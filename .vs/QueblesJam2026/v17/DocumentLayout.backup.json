@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\aguan\\OneDrive\\Documents\\GitHub\\folder\\QueblesJam2026\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1AEA0AF5-76BE-1611-3C83-8585D1D13140}|Assembly-CSharp.csproj|C:\\Users\\aguan\\OneDrive\\Documents\\GitHub\\folder\\QueblesJam2026\\assets\\scripts\\stackinggamescript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AEA0AF5-76BE-1611-3C83-8585D1D13140}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\stackinggamescript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1AEA0AF5-76BE-1611-3C83-8585D1D13140}|Assembly-CSharp.csproj|c:\\users\\aguan\\onedrive\\documents\\github\\folder\\queblesjam2026\\assets\\scripts\\spritechanger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1AEA0AF5-76BE-1611-3C83-8585D1D13140}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\spritechanger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AEA0AF5-76BE-1611-3C83-8585D1D13140}|Assembly-CSharp.csproj|C:\\Users\\aguan\\OneDrive\\Documents\\GitHub\\folder\\QueblesJam2026\\assets\\scripts\\stackinggamescript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AEA0AF5-76BE-1611-3C83-8585D1D13140}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\stackinggamescript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1AEA0AF5-76BE-1611-3C83-8585D1D13140}|Assembly-CSharp.csproj|C:\\Users\\aguan\\OneDrive\\Documents\\GitHub\\folder\\QueblesJam2026\\assets\\scripts\\loselife.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -22,11 +22,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "SpriteChanger.cs",
               "DocumentMoniker": "C:\\Users\\aguan\\OneDrive\\Documents\\GitHub\\folder\\QueblesJam2026\\Assets\\Scripts\\SpriteChanger.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\SpriteChanger.cs",
@@ -51,16 +51,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "StackingGameScript.cs",
               "DocumentMoniker": "C:\\Users\\aguan\\OneDrive\\Documents\\GitHub\\folder\\QueblesJam2026\\Assets\\Scripts\\StackingGameScript.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\StackingGameScript.cs",
               "ToolTip": "C:\\Users\\aguan\\OneDrive\\Documents\\GitHub\\folder\\QueblesJam2026\\Assets\\Scripts\\StackingGameScript.cs",
               "RelativeToolTip": "Assets\\Scripts\\StackingGameScript.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAiwEsAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-05T20:14:06.933Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-05T20:14:06.933Z"
             }
           ]
         }
