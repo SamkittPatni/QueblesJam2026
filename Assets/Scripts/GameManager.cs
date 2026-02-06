@@ -37,4 +37,9 @@ public class GameManager : MonoBehaviour
         Debug.Log("Week " + week + " ended. Trust: " + trust);
         // Here you can add logic to transition to the next week, reset NPCs, etc.
     }
+
+    public void AddTrust(float amount)
+    {
+        trust += amount;
+    }
 }

@@ -57,8 +57,11 @@ Material:
   m_Shader: {fileID: 4800000, guid: 68e6db2ebdc24f95958faec2be5558d6, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
+  m_ValidKeywords:
+  - UNDERLAY_ON
+  m_InvalidKeywords:
+  - MASK_HARD
+  - RATIOS_OFF
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -119,9 +122,9 @@ Material:
     - _OutlineWidth: 0
     - _PerspectiveFilter: 0.875
     - _Reflectivity: 10
-    - _ScaleRatioA: 0
-    - _ScaleRatioB: 0
-    - _ScaleRatioC: 0
+    - _ScaleRatioA: 1
+    - _ScaleRatioB: 1
+    - _ScaleRatioC: 1
     - _ScaleX: 1
     - _ScaleY: 1
     - _ShaderFlags: 0
@@ -211,7 +214,7 @@ MonoBehaviour:
     fontStyleModifier: 0
     renderMode: 4165
     includeFontFeatures: 1
-  m_SourceFontFile: {fileID: 12800000, guid: fe58caf6298f5ad46a60719d371ec95a, type: 3}
+  m_SourceFontFile: {fileID: 0}
   m_SourceFontFilePath: 
   m_AtlasPopulationMode: 1
   InternalDynamicOS: 0
