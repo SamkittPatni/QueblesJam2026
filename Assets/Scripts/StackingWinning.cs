@@ -16,7 +16,7 @@ public class StackingWinning : MonoBehaviour
         {
             Debug.Log("Winner!");
             gameWon = true;
-
+            gameManager.WinGame(); /// tell game manager to stop game (see gm script)
         }
 
 

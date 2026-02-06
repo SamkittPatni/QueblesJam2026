@@ -126,9 +126,10 @@ public class StackingGameManager : MonoBehaviour
             playing = false;
         }
     }
-    public void WinGame() 
-    {/// win condition
+    public void WinGame()
 
+    {/// win condition
+        playing = false;
     }
 }
 
