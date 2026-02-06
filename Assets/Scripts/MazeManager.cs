@@ -18,6 +18,7 @@ public class MazeManager : MonoBehaviour
     public TMP_Text dialogueText; // Reference to a TextMeshPro text element to display dialogue
     public GameObject dialoguePanel; // Reference to a UI panel for dialogue
     public GameObject dialogueCharacter; // Reference to a UI element for the character portrait in dialogue
+    public GameObject transparentScreen;
     void Start()
     {
         startTime = 0f;
@@ -55,6 +56,7 @@ public class MazeManager : MonoBehaviour
 
     private IEnumerator PlayDialogue(bool success)
     {
+        transparentScreen.SetActive(true);
         dialogueCharacter.SetActive(true);
         yield return new WaitForSeconds(0.5f); // Wait for the panel to appear
         dialoguePanel.SetActive(true);
