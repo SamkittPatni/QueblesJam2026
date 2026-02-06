@@ -81,7 +81,7 @@ public class StackingGameManager : MonoBehaviour
         blockSpeed += blockSpeedIncrement;
 
     }
-
+    
 
     //update is called once per frame
     void Update()
@@ -89,7 +89,10 @@ public class StackingGameManager : MonoBehaviour
         if (playing == true)
         {
             startTime += Time.deltaTime;
-            timerText.text = startTime.ToString("#.00");
+            int minutes = Mathf.FloorToInt((startTime / 60));
+            int seconds = Mathf.FloorToInt((startTime % 60));
+            string text = string.Format("{0:00}:{1:00}", minutes, seconds);
+            timerText.text = text;
         }
 
         if (startTime >= stackingGameTimeLimit && playing == true) 
