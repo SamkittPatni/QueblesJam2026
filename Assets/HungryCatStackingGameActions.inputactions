@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "name": "HungryCatStackingGameActions",
+    "maps": [
+        {
+            "name": "Thing",
+            "id": "8aa055ee-2c74-4126-8fa5-ca20b6d5a735",
+            "actions": [
+                {
+                    "name": "Multitap",
+                    "type": "Button",
+                    "id": "571b8dc1-e471-4ab7-9e03-21eba8086b3c",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "MultiTap(tapCount=10)",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "dd456531-9f3a-41a7-ac49-5ff1f738769e",
+                    "path": "<Keyboard>/q",
+                    "interactions": "MultiTap(tapCount=10)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Multitap",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

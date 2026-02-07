@@ -7,11 +7,16 @@ using Unity.VisualScripting;
 
 public class StackingGameManager : MonoBehaviour
 {
+    [SerializeField] private HungryCatObject catScript;
+
+
     [SerializeField] private Transform blockPrefab;
     [SerializeField] private Transform blockHolder;
 
     [SerializeField] private TMPro.TextMeshProUGUI livesText;
     [SerializeField] private TMPro.TextMeshProUGUI timerText;
+
+
 
     /// <summary>
     ///  variables to handle the game state
@@ -20,7 +25,7 @@ public class StackingGameManager : MonoBehaviour
     private int livesRemaining;
     private bool playing = true;
 
-    private float stackingGameTimeLimit = 25f; /// 10f ~ 13 seconds
+    private float stackingGameTimeLimit = 120f; /// 10f ~ 13 seconds
 
     public InputAction InputSystem_Actions;
     private void OnEnable()
@@ -62,7 +67,7 @@ public class StackingGameManager : MonoBehaviour
     private float xLimit = 5; ///block will know to reverse when x>5. block can extend over the edge,making game more interesting
     private float timeBetweenRounds = 1f;
 
-    private float startTime = 0f;
+    private float blockStartTime = 0f;
 
 
     void Start()
@@ -70,6 +75,9 @@ public class StackingGameManager : MonoBehaviour
         livesRemaining = startingLives;
         livesText.text = $"{livesRemaining}";
         SpawnNewBlock();
+
+        ////hCatObject.position = catStartPosition;
+        ///StartCoroutine(hObjectCat.Movement(hObjectCat.StartPosition, hObjectCat.OnScreenPosition));
     }
 
     private void SpawnNewBlock()
@@ -82,28 +90,28 @@ public class StackingGameManager : MonoBehaviour
         blockSpeed += blockSpeedIncrement;
 
     }
-    
+
 
     //update is called once per frame
     void Update()
     {
         if (playing == true)
         {
-            startTime += Time.deltaTime;
-            int minutes = Mathf.FloorToInt((startTime / 60));
-            int seconds = Mathf.FloorToInt((startTime % 60));
+            blockStartTime += Time.deltaTime;
+            int minutes = Mathf.FloorToInt((blockStartTime / 60));
+            int seconds = Mathf.FloorToInt((blockStartTime % 60));
             string text = string.Format("{0:00}:{1:00}", minutes, seconds);
             timerText.text = text;
         }
 
-        if (startTime >= stackingGameTimeLimit && playing == true) 
-                {
+        if (blockStartTime >= stackingGameTimeLimit && playing == true)
+        {
             playing = false;
             Debug.Log("You ran out of time!");
 
         }
 
-        ///startTime += Time.deltaTime;
+        ///blockStartTime += Time.deltaTime;
         //if we have a waiting block, move it about.
         if (currentBlock && playing) /// added playing boolean - makes blocks stop spawning if game is over
         {
@@ -134,6 +142,35 @@ public class StackingGameManager : MonoBehaviour
 
     {/// win condition
         playing = false;
+    }
+
+    private void OnMultitap()
+    {
+        if (catScript != null)
+        {
+            catScript.StartCoroutine(catScript.Transition());
+        }
+    }
+    public void RemoveLastBlock()
+    {
+        // Check if there are any blocks to remove
+        if (blockHolder.childCount > 0)
+        {
+            // Get the very last block that was spawned
+            Transform lastBlock = blockHolder.GetChild(blockHolder.childCount - 1);
+
+            Debug.Log("The cat ate a tuna can! Removing: " + lastBlock.name);
+
+            // Destroy the block object
+            Destroy(lastBlock.gameObject);
+
+            // Optional: Subtract a life or play a sound
+            RemoveLife();
+        }
+        else
+        {
+            Debug.Log("No tuna cans left for the cat to eat!");
+        }
     }
 }
 

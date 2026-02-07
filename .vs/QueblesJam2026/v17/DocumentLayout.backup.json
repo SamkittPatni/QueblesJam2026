@@ -1,26 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\aguan\\OneDrive\\Documents\\GitHub\\folder4\\QueblesJam2026\\",
+  "WorkspaceRootPath": "C:\\Users\\aguan\\Github\\QueblesJam2026\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1AEA0AF5-76BE-1611-3C83-8585D1D13140}|Assembly-CSharp.csproj|C:\\Users\\aguan\\OneDrive\\Documents\\GitHub\\folder4\\QueblesJam2026\\assets\\scripts\\hungrycatobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AEA0AF5-76BE-1611-3C83-8585D1D13140}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\hungrycatobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\aguan\\Github\\QueblesJam2026\\Assets\\Scripts\\StackingGameScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\StackingGameScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1AEA0AF5-76BE-1611-3C83-8585D1D13140}|Assembly-CSharp.csproj|c:\\users\\aguan\\onedrive\\documents\\github\\folder4\\queblesjam2026\\assets\\scripts\\hungrycatinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AEA0AF5-76BE-1611-3C83-8585D1D13140}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\hungrycatinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\aguan\\Github\\QueblesJam2026\\Assets\\Scripts\\StackingWinning.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\StackingWinning.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1AEA0AF5-76BE-1611-3C83-8585D1D13140}|Assembly-CSharp.csproj|C:\\Users\\aguan\\OneDrive\\Documents\\GitHub\\folder4\\QueblesJam2026\\assets\\scripts\\stackinggamescript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AEA0AF5-76BE-1611-3C83-8585D1D13140}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\stackinggamescript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\aguan\\Github\\QueblesJam2026\\Assets\\Scripts\\HungryCatObject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\HungryCatObject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1AEA0AF5-76BE-1611-3C83-8585D1D13140}|Assembly-CSharp.csproj|c:\\users\\aguan\\onedrive\\documents\\github\\folder4\\queblesjam2026\\assets\\scripts\\stackingwinning.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AEA0AF5-76BE-1611-3C83-8585D1D13140}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\stackingwinning.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1AEA0AF5-76BE-1611-3C83-8585D1D13140}|Assembly-CSharp.csproj|C:\\Users\\aguan\\OneDrive\\Documents\\GitHub\\folder4\\QueblesJam2026\\assets\\scripts\\loselife.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AEA0AF5-76BE-1611-3C83-8585D1D13140}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\loselife.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\aguan\\Github\\QueblesJam2026\\Assets\\Scripts\\LoseLife.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\LoseLife.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,71 +26,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "HungryCatInput.cs",
-              "DocumentMoniker": "C:\\Users\\aguan\\OneDrive\\Documents\\GitHub\\folder4\\QueblesJam2026\\Assets\\Scripts\\HungryCatInput.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\HungryCatInput.cs",
-              "ToolTip": "C:\\Users\\aguan\\OneDrive\\Documents\\GitHub\\folder4\\QueblesJam2026\\Assets\\Scripts\\HungryCatInput.cs",
-              "RelativeToolTip": "Assets\\Scripts\\HungryCatInput.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "StackingGameScript.cs",
+              "DocumentMoniker": "C:\\Users\\aguan\\Github\\QueblesJam2026\\Assets\\Scripts\\StackingGameScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\StackingGameScript.cs",
+              "ToolTip": "C:\\Users\\aguan\\Github\\QueblesJam2026\\Assets\\Scripts\\StackingGameScript.cs",
+              "RelativeToolTip": "Assets\\Scripts\\StackingGameScript.cs",
+              "ViewState": "AgIAAI0AAAAAAAAAAAAAAJ0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-07T02:26:04.929Z",
+              "WhenOpened": "2026-02-07T21:00:23.054Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "HungryCatObject.cs",
-              "DocumentMoniker": "C:\\Users\\aguan\\OneDrive\\Documents\\GitHub\\folder4\\QueblesJam2026\\Assets\\Scripts\\HungryCatObject.cs",
+              "DocumentMoniker": "C:\\Users\\aguan\\Github\\QueblesJam2026\\Assets\\Scripts\\HungryCatObject.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\HungryCatObject.cs",
-              "ToolTip": "C:\\Users\\aguan\\OneDrive\\Documents\\GitHub\\folder4\\QueblesJam2026\\Assets\\Scripts\\HungryCatObject.cs",
+              "ToolTip": "C:\\Users\\aguan\\Github\\QueblesJam2026\\Assets\\Scripts\\HungryCatObject.cs",
               "RelativeToolTip": "Assets\\Scripts\\HungryCatObject.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAkwEUAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAD0AAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-07T01:03:01.304Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "StackingWinning.cs",
-              "DocumentMoniker": "C:\\Users\\aguan\\OneDrive\\Documents\\GitHub\\folder4\\QueblesJam2026\\Assets\\Scripts\\StackingWinning.cs",
+              "DocumentMoniker": "C:\\Users\\aguan\\Github\\QueblesJam2026\\Assets\\Scripts\\StackingWinning.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\StackingWinning.cs",
-              "ToolTip": "C:\\Users\\aguan\\OneDrive\\Documents\\GitHub\\folder4\\QueblesJam2026\\Assets\\Scripts\\StackingWinning.cs",
+              "ToolTip": "C:\\Users\\aguan\\Github\\QueblesJam2026\\Assets\\Scripts\\StackingWinning.cs",
               "RelativeToolTip": "Assets\\Scripts\\StackingWinning.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-06T15:19:07.032Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "LoseLife.cs",
-              "DocumentMoniker": "C:\\Users\\aguan\\OneDrive\\Documents\\GitHub\\folder4\\QueblesJam2026\\Assets\\Scripts\\LoseLife.cs",
+              "DocumentMoniker": "C:\\Users\\aguan\\Github\\QueblesJam2026\\Assets\\Scripts\\LoseLife.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\LoseLife.cs",
-              "ToolTip": "C:\\Users\\aguan\\OneDrive\\Documents\\GitHub\\folder4\\QueblesJam2026\\Assets\\Scripts\\LoseLife.cs",
+              "ToolTip": "C:\\Users\\aguan\\Github\\QueblesJam2026\\Assets\\Scripts\\LoseLife.cs",
               "RelativeToolTip": "Assets\\Scripts\\LoseLife.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-06T15:13:08.374Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "StackingGameScript.cs",
-              "DocumentMoniker": "C:\\Users\\aguan\\OneDrive\\Documents\\GitHub\\folder4\\QueblesJam2026\\Assets\\Scripts\\StackingGameScript.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\StackingGameScript.cs",
-              "ToolTip": "C:\\Users\\aguan\\OneDrive\\Documents\\GitHub\\folder4\\QueblesJam2026\\Assets\\Scripts\\StackingGameScript.cs",
-              "RelativeToolTip": "Assets\\Scripts\\StackingGameScript.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAAwCkAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-06T14:56:03.137Z",
               "EditorCaption": ""
             }
           ]

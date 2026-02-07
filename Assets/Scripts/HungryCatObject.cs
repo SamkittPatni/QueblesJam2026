@@ -38,8 +38,6 @@ public class HungryCatObject : MonoBehaviour
         StartCoroutine(Movement(StartPosition, OnScreenPosition));
     }
 
-
-    
     
     
     public IEnumerator Movement(Vector3 positionA, Vector3 positionB)
@@ -60,15 +58,18 @@ public class HungryCatObject : MonoBehaviour
         }
         
     }
-    private void OnMultitap() {
-        Debug.Log("6767676767");
-        StartCoroutine(Movement(OnScreenPosition, ExitPosition));
-        StartCoroutine(Transition());
-    }
 
-    private IEnumerator Transition() { 
-    yield return new WaitForSeconds(5f);    
-    StartCoroutine(Movement(StartPosition, OnScreenPosition));
+   /// public void OnMultitap() {
+      ///  Debug.Log("6767676767");
+        ///StartCoroutine(Movement(OnScreenPosition, ExitPosition));
+       /// StartCoroutine(Transition());
+    ///}
+
+    public IEnumerator Transition() {
+        Debug.Log("6767676767");
+        yield return StartCoroutine(Movement(OnScreenPosition, ExitPosition));
+        yield return new WaitForSeconds(5f);    
+        StartCoroutine(Movement(StartPosition, OnScreenPosition));
     }
 }
 
