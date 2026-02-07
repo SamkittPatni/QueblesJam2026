@@ -61,11 +61,13 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.3.5f1-x86_64\Editor\Data\Tools\BuildPipeline\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\HungryCatInput.cs" />
     <Compile Include="Assets\Scripts\PlayerInteractMaze.cs" />
     <Compile Include="Assets\Scripts\MazeManager.cs" />
     <Compile Include="Assets\Scripts\CashierMiniGameInput.cs" />
     <Compile Include="Assets\Scripts\NPCManagement.cs" />
     <Compile Include="Assets\Scripts\CashierMiniGameObject.cs" />
+    <Compile Include="Assets\Scripts\HungryCatObject.cs" />
     <Compile Include="Assets\Scripts\PlayerInteract.cs" />
     <Compile Include="Assets\Scripts\StackingGameScript.cs" />
     <Compile Include="Assets\Scripts\LoseLife.cs" />

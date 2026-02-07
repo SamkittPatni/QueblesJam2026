@@ -104,6 +104,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Multitap",
+                    "type": "Button",
+                    "id": "aae7511c-02a5-498d-9ebe-3cbf79aea74b",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "MultiTap(tapCount=10)",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -511,6 +520,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Submit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7d0f19ec-4e10-40ff-abad-ac68836f128d",
+                    "path": "<Keyboard>/q",
+                    "interactions": "MultiTap(tapCount=10)",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Multitap",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

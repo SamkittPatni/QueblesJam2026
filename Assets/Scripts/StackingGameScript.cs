@@ -39,6 +39,7 @@ public class StackingGameManager : MonoBehaviour
     }
     private void OnDrop()
     {
+        ///Debug.Log("67676767");
         /// stop it moving.
         currentBlock = null; /// if(currentBLock) will no longer recall so the horizontal motion will stop.
                              /// activate the rigidbody to enable gravity to drop it.
