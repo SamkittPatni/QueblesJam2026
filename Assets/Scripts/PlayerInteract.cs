@@ -16,6 +16,33 @@ public class PlayerInteract : MonoBehaviour
 
     private void OnInteract()
     {
+        if (!GameManager.Instance.playedMinigame && currentNPC != -1)
+        {
+            if (GameManager.Instance.week == 1 && currentNPC == 1)
+            {
+                // Trigger minigame for week 1
+                Debug.Log("Starting minigame for week 1");
+                StartCoroutine(PlayMinigame(dialogueCharacters[1], dialogue: "Minigame for week 1!"));
+                GameManager.Instance.playedMinigame = true;
+                return;
+            }
+            else if (GameManager.Instance.week == 2 && currentNPC == 4)
+            {
+                // Trigger minigame for week 2
+                Debug.Log("Starting minigame for week 2");
+                StartCoroutine(PlayMinigame(dialogueCharacters[10], dialogue: "Minigame for week 2!"));
+                GameManager.Instance.playedMinigame = true;
+                return;
+            }
+            else if (GameManager.Instance.week == 3 && currentNPC == 5)
+            {
+                // Trigger minigame for week 3
+                Debug.Log("Starting minigame for week 3");
+                StartCoroutine(PlayMinigame(dialogueCharacters[13], dialogue: "Minigame for week 3!"));
+                GameManager.Instance.playedMinigame = true;
+                return;
+            }
+        }
         if (currentNPC != -1)
         {
             Debug.Log("Interacting with NPC: " + currentNPC);
@@ -152,5 +179,22 @@ public class PlayerInteract : MonoBehaviour
         dialogueBox.SetActive(false);
         transparentScreen.SetActive(false);
         dialogueCharacter.SetActive(false);
+    }
+
+    IEnumerator PlayMinigame(GameObject dialogueCharacter, string dialogue)
+    {
+        transparentScreen.SetActive(true);
+        dialogueCharacter.SetActive(true);
+        yield return new WaitForSeconds(0.5f); // Wait for the panel to appear
+        dialogueBox.SetActive(true);
+        yield return new WaitForSeconds(0.5f); // Wait for the dialogue to appear
+        dialogueText.text = dialogue;
+        yield return new WaitForSeconds(3f); // Display dialogue for 3 seconds
+        dialogueText.text = "";
+        dialogueBox.SetActive(false);
+        transparentScreen.SetActive(false);
+        dialogueCharacter.SetActive(false);
+        // Here you would load the minigame scene or trigger the minigame logic
+        Debug.Log("Minigame would start now!");
     }
 }
