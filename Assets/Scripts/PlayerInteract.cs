@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using TMPro;
 
 public class PlayerInteract : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class PlayerInteract : MonoBehaviour
     public GameObject transparentScreen;
 
     public GameObject [] dialogueCharacters; // Array of character portraits for dialogue
+
+    public GameObject interactBackground;
+    public TMP_Text interactText;
 
     private void OnInteract()
     {
@@ -102,6 +106,8 @@ public class PlayerInteract : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        interactBackground.SetActive(true);
+        interactText.text = "Interact [E]";
         // Set currentNPC to the NPC number based on the tag of the collided object
         if (other.gameObject.CompareTag("NPC1"))
         {
@@ -129,6 +135,8 @@ public class PlayerInteract : MonoBehaviour
     void OnTriggerExit2D(Collider2D other)
     {
         currentNPC = -1; // Reset when exiting NPC range
+        interactBackground.SetActive(false);
+        interactText.text = "";
     }
 
     IEnumerator PlayDialogue(GameObject dialogueCharacter, string dialogue)
