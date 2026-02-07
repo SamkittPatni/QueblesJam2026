@@ -128,8 +128,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 206352728}
-  - component: {fileID: 206352727}
   - component: {fileID: 206352729}
+  - component: {fileID: 206352730}
   m_Layer: 0
   m_Name: StackingGameManager
   m_TagString: Untagged
@@ -137,31 +137,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &206352727
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 206352726}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ce53d338b021cc4a8535234cfec0a7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::StackingGameManager
-  blockPrefab: {fileID: 5243127753205009041, guid: cf13f9a25751afc48864b54d0a28e6b5, type: 3}
-  blockHolder: {fileID: 944398124}
-  livesText: {fileID: 1116390833}
-  timerText: {fileID: 1566542609}
-  InputSystem_Actions:
-    m_Name: Input System_Actions
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 21cf7b2e-737d-41bc-8e2e-d90ba77930d2
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
 --- !u!4 &206352728
 Transform:
   m_ObjectHideFlags: 0
@@ -184,7 +159,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 206352726}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
@@ -207,6 +182,32 @@ MonoBehaviour:
   m_DefaultActionMap: 
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &206352730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 206352726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cc3f5277a21409469c18949d5ddd1d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StackingGameManager
+  catScript: {fileID: 2066881325}
+  blockPrefab: {fileID: 5243127753205009041, guid: cf13f9a25751afc48864b54d0a28e6b5, type: 3}
+  blockHolder: {fileID: 944398124}
+  livesText: {fileID: 1116390833}
+  timerText: {fileID: 1566542609}
+  InputSystem_Actions:
+    m_Name: Input System_Actions
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 1b6034df-166f-4e36-b960-cf97296ab56b
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
 --- !u!1 &214012587
 GameObject:
   m_ObjectHideFlags: 0
@@ -317,7 +318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808ff0cfe0ea2114cae4da6ba0e31de5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LoseLife
-  gameManager: {fileID: 206352727}
+  gameManager: {fileID: 0}
 --- !u!61 &429649934
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -692,8 +693,8 @@ Transform:
   m_GameObject: {fileID: 1053489860}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.02, y: 0.08, z: 0}
-  m_LocalScale: {x: 0.9182817, y: 0.9328379, z: 0.95139}
+  m_LocalPosition: {x: 0.0281, y: 0.01, z: 0}
+  m_LocalScale: {x: 0.9267431, y: 0.93619615, z: 0.95139}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -986,7 +987,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c14b316ae0aaa1b49be3d6580cd1bc76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StackingWinning
-  gameManager: {fileID: 206352727}
+  gameManager: {fileID: 206352730}
   stabilityTimer: 0
   requiredStabilityTime: 3
 --- !u!1 &1503352887
@@ -1254,7 +1255,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 1, g: 0, b: 0.09759998, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1559,8 +1560,6 @@ GameObject:
   - component: {fileID: 2066881324}
   - component: {fileID: 2066881323}
   - component: {fileID: 2066881325}
-  - component: {fileID: 2066881326}
-  - component: {fileID: 2066881327}
   m_Layer: 0
   m_Name: Cat_Hungry__0
   m_TagString: Untagged
@@ -1636,7 +1635,7 @@ Transform:
   m_GameObject: {fileID: 2066881322}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.59, y: -6.55, z: 0}
+  m_LocalPosition: {x: 7.59, y: -6.47, z: 0}
   m_LocalScale: {x: 0.12, y: 0.12, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1658,7 +1657,7 @@ MonoBehaviour:
     m_Name: Input System_Actions
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 019a0c1e-51d6-445f-9c87-8cf1cfe82589
+    m_Id: 36d099af-fc62-4a24-8f6f-be07a1435930
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -1668,62 +1667,6 @@ MonoBehaviour:
   StartPosition: {x: 7.59, y: -6.55, z: 0}
   OnScreenPosition: {x: 7.59, y: -3.75, z: 0}
   ExitPosition: {x: 7.59, y: -6.55, z: 0}
---- !u!114 &2066881326
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2066881322}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c81a7da04488334f9fa525ab86d92c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HungryCatObject
-  InputSystem_Actions:
-    m_Name: Input System_Actions
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 6f0d82ef-2caa-420a-942c-48e9a3a9d7b1
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
-  speed: 4
-  Duration: 0.5
-  StartPosition: {x: 7.59, y: -6.55, z: 0}
-  OnScreenPosition: {x: 7.59, y: -3.65, z: 0}
-  ExitPosition: {x: 0, y: 0, z: 0}
---- !u!114 &2066881327
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2066881322}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
-  m_Actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
-  m_NotificationBehavior: 0
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 1
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: 
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

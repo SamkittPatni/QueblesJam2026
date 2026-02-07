@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\MazeManager.cs" />
     <Compile Include="Assets\Scripts\CashierMiniGameInput.cs" />
     <Compile Include="Assets\Scripts\NPCManagement.cs" />
+    <Compile Include="Assets\Scripts\TurningScript.cs" />
     <Compile Include="Assets\Scripts\CashierMiniGameObject.cs" />
     <Compile Include="Assets\Scripts\HungryCatObject.cs" />
     <Compile Include="Assets\Scripts\PlayerInteract.cs" />
@@ -76,6 +77,7 @@
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\StackingWinning.cs" />
     <Compile Include="Assets\Scripts\SpriteChanger.cs" />
+    <Compile Include="Assets\Scripts\IntroManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
