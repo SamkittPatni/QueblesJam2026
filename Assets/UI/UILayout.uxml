@@ -1,6 +1,32 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/Stylesheet.uss?fileID=7433441132597879392&amp;guid=b5b2e3f37d28e81f3bbf7d37baf9ad8e&amp;type=3#Stylesheet"/>
-    <ui:Label text="3:00" name="Clock" double-click-selects-word="true" style="top: 32px; left: auto; right: -320px; align-self: center; -unity-font-definition: url(&quot;project://database/Assets/UI/Font/DepartureMono-Regular.otf?fileID=12800000&amp;guid=09d6de26969ea47349ceb81540318594&amp;type=3#DepartureMono-Regular&quot;); color: rgb(50, 78, 104); -unity-font-style: bold;"/>
-    <ui:ProgressBar value="80" title="" name="TrustBar" style="height: 20px; width: 89px; right: 22px; align-self: flex-end; top: 35px; font-size: 12px; -unity-font-definition: url(&quot;project://database/Assets/UI/Font/DepartureMono-Regular.otf?fileID=12800000&amp;guid=09d6de26969ea47349ceb81540318594&amp;type=3#DepartureMono-Regular&quot;); background-color: rgb(226, 188, 115); color: rgb(226, 188, 115); -unity-text-align: middle-center; -unity-text-outline-color: rgb(224, 224, 224); -unity-text-outline-width: 0;"/>
-    <ui:Label text="Todo:" name="Todo" style="height: 27px; width: 51px; right: 55px; left: auto; top: 45px; align-self: flex-end; -unity-font-style: bold;"/>
+    <ui:VisualElement name="root" style="flex-grow: 1;">
+        <ui:VisualElement style="flex-grow: 1;"/>
+        <ui:VisualElement style="flex-grow: 1; height: 72.5%; align-self: auto; flex-direction: row; width: 100%;">
+            <ui:VisualElement style="flex-grow: 1; width: 1275px; flex-shrink: 0;"/>
+            <ui:VisualElement name="StoreSceneUIContianer" style="flex-grow: 1;">
+                <ui:Label text="MONDAY" name="WeekDayDisplay" style="background-color: rgba(226, 188, 115, 0); -unity-text-outline-width: 0; -unity-text-outline-color: rgb(247, 238, 221); font-size: 65px; text-shadow: 3px 3px 0 rgba(160, 159, 159, 0.97); color: rgb(226, 188, 115);"/>
+                <ui:Label text="3:00" name="TimerDisplay" style="background-image: url(&quot;project://database/Assets/Sprites/4_Elements/Digital_Clock.png?fileID=-2746184381543474037&amp;guid=517a99796baaa774284ee01a6f514b1c&amp;type=3#Digital_Clock_0&quot;); color: rgb(50, 78, 104); -unity-background-scale-mode: scale-to-fit; height: 150px; margin-top: 0; font-size: 40px; -unity-font-style: bold;"/>
+                <ui:Label text="Trust" style="margin-bottom: 0; padding-bottom: 0; -unity-font-style: bold;"/>
+                <ui:VisualElement style="flex-grow: 0; height: 80px; flex-shrink: 0; flex-direction: row; padding-left: 20px; margin-right: 20px;">
+                    <ui:VisualElement style="flex-grow: 0; flex-shrink: 0; background-image: url(&quot;project://database/Assets/Sprites/4_Elements/Heart.png?fileID=2800000&amp;guid=a4bb278df31733144a50cada0b95a767&amp;type=3#Heart&quot;); -unity-background-scale-mode: scale-to-fit; width: 40px; padding-bottom: 0; margin-bottom: 10px;"/>
+                    <ui:ProgressBar value="20" title="" name="TrustBar" style="margin-top: 15px; margin-right: 15px; margin-bottom: 15px; margin-left: 15px; width: auto; flex-grow: 1;"/>
+                </ui:VisualElement>
+                <ui:VisualElement name="TodoDisplay" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Sprites/4_Elements/Note_No_Lines.png?fileID=-1408191461534774206&amp;guid=e7cef94bf62215841ae267e1a2f4cbdb&amp;type=3#Note_No_Lines_0&quot;); -unity-background-scale-mode: scale-to-fit; height: 200px; min-height: 0; width: auto; flex-direction: row; margin-top: 25px;">
+                    <ui:VisualElement style="flex-grow: 0; width: 90px; min-width: 0; height: auto; flex-shrink: 1;"/>
+                    <ui:VisualElement style="flex-grow: 1; width: auto;">
+                        <ui:Label text="Todo:" name="TodoDisplay" enable-rich-text="true" style="color: rgb(50, 78, 104); height: 30px; width: auto; -unity-text-align: middle-left; margin-bottom: 10px; margin-top: 5px; margin-left: 7px; -unity-font-style: bold;"/>
+                        <ui:Label text="Talk to Customer&#10;&#10;Order Pizza" style="height: auto; white-space: normal; width: 167px; color: rgb(50, 78, 104); -unity-text-align: upper-left; font-size: 25px; -unity-font-style: bold;"/>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="TunaCounterDisplay" style="flex-grow: 1; flex-direction: row;">
+                    <ui:VisualElement name="TunaSprite" style="flex-grow: 1; flex-shrink: 0; background-image: url(&quot;project://database/Assets/Sprites/6_Minigames/1_StackingGame/Tuna_can_B.png?fileID=8349529881214796032&amp;guid=371264fa5d1769d46acbfafce3050948&amp;type=3#Tuna_can_B_0&quot;); -unity-background-scale-mode: scale-to-fit; width: 30px; margin-left: 50px;"/>
+                    <ui:VisualElement name="" style="flex-grow: 1;">
+                        <ui:Label text="x0" name="TunaCounterNumber" style="width: 100%; height: 100%; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 50px; padding-bottom: 0; padding-left: 0;"/>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1;"/>
+    </ui:VisualElement>
 </ui:UXML>
