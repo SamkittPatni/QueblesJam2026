@@ -1,8 +1,14 @@
 using UnityEngine;
+using System.Collections;
 
 public class PlayerInteract : MonoBehaviour
 {
     private int currentNPC = -1; // -1 means no NPC in range
+    public GameObject dialogueBox; // Reference to the dialogue box UI element
+    public TMPro.TMP_Text dialogueText; // Reference to the TextMeshPro text element
+    public GameObject transparentScreen;
+
+    public GameObject [] dialogueCharacters; // Array of character portraits for dialogue
 
     private void OnInteract()
     {
@@ -10,6 +16,87 @@ public class PlayerInteract : MonoBehaviour
         {
             Debug.Log("Interacting with NPC: " + currentNPC);
             // Here you would trigger the dialogue or interaction logic for the NPC
+            switch (currentNPC)
+            {
+                case 1:
+                    // Trigger dialogue for NPC 1
+                    if (GameManager.Instance.trust < 30f)
+                    {
+                        StartCoroutine(PlayDialogue(dialogueCharacters[0], dialogue: "Hello, I'm NPC 1. Nice to meet you!"));
+                    }
+                    else if (GameManager.Instance.trust >= 30f && GameManager.Instance.trust < 65f)
+                    {
+                        StartCoroutine(PlayDialogue(dialogueCharacters[1], dialogue: "It's good to see you again!"));
+                    }
+                    else if (GameManager.Instance.trust >= 65f)
+                    {
+                        StartCoroutine(PlayDialogue(dialogueCharacters[2], dialogue: "We have already talked twice!"));
+                    }
+                    break;
+                case 2:
+                    // Trigger dialogue for NPC 2
+                    if (GameManager.Instance.trust < 30f)
+                    {
+                        StartCoroutine(PlayDialogue(dialogueCharacters[3], dialogue: "Hi there, I'm NPC 2. Welcome!"));
+                    }
+                    else if (GameManager.Instance.trust >= 30f && GameManager.Instance.trust < 65f)
+                    {
+                        StartCoroutine(PlayDialogue(dialogueCharacters[4], dialogue: "Oh, it's you again!"));
+                    }
+                    else if (GameManager.Instance.trust >= 65f)
+                    {
+                        StartCoroutine(PlayDialogue(dialogueCharacters[5], dialogue: "We have already talked twice!"));
+                    }
+                    break;
+                case 3:
+                    // Trigger dialogue for NPC 3
+                    if (GameManager.Instance.trust < 30f)
+                    {
+                        StartCoroutine(PlayDialogue(dialogueCharacters[6], dialogue: "Hey, I'm NPC 3. Nice to meet you!"));
+                    }
+                    else if (GameManager.Instance.trust >= 30f && GameManager.Instance.trust < 65f)
+                    {
+                        StartCoroutine(PlayDialogue(dialogueCharacters[7], dialogue: "It's good to see you again!"));
+                    }
+                    else if (GameManager.Instance.trust >= 65f)
+                    {
+                        StartCoroutine(PlayDialogue(dialogueCharacters[8], dialogue: "We have already talked twice!"));
+                    }
+                    break;
+                case 4:
+                    // Trigger dialogue for NPC 4
+                    if (GameManager.Instance.trust < 30f)
+                    {
+                        StartCoroutine(PlayDialogue(dialogueCharacters[9], dialogue: "Hello, I'm NPC 4. Nice to meet you!"));
+                    }
+                    else if (GameManager.Instance.trust >= 30f && GameManager.Instance.trust < 65f)
+                    {
+                        StartCoroutine(PlayDialogue(dialogueCharacters[10], dialogue: "It's good to see you again!"));
+                    }
+                    else if (GameManager.Instance.trust >= 65f)
+                    {
+                        StartCoroutine(PlayDialogue(dialogueCharacters[11], dialogue: "We have already talked twice!"));
+                    }
+                    break;
+                case 5:
+                    // Trigger dialogue for NPC 5
+                    if (GameManager.Instance.trust < 30f)
+                    {
+                        StartCoroutine(PlayDialogue(dialogueCharacters[12], dialogue: "Hi, I'm NPC 5. Welcome!"));
+                    }
+                    else if (GameManager.Instance.trust >= 30f && GameManager.Instance.trust < 65f)
+                    {
+                        StartCoroutine(PlayDialogue(dialogueCharacters[13], dialogue: "Oh, it's you again!"));
+
+                    }
+                    else if (GameManager.Instance.trust >= 65f)
+                    {
+                        StartCoroutine(PlayDialogue(dialogueCharacters[14], dialogue: "We have already talked twice!"));
+                    }
+                    break;
+                default:
+                    break;
+            }
         }
     }
 
@@ -42,5 +129,20 @@ public class PlayerInteract : MonoBehaviour
     void OnTriggerExit2D(Collider2D other)
     {
         currentNPC = -1; // Reset when exiting NPC range
+    }
+
+    IEnumerator PlayDialogue(GameObject dialogueCharacter, string dialogue)
+    {
+        transparentScreen.SetActive(true);
+        dialogueCharacter.SetActive(true);
+        yield return new WaitForSeconds(0.5f); // Wait for the panel to appear
+        dialogueBox.SetActive(true);
+        yield return new WaitForSeconds(0.5f); // Wait for the dialogue to appear
+        dialogueText.text = dialogue;
+        yield return new WaitForSeconds(3f); // Display dialogue for 3 seconds
+        dialogueText.text = "";
+        dialogueBox.SetActive(false);
+        transparentScreen.SetActive(false);
+        dialogueCharacter.SetActive(false);
     }
 }

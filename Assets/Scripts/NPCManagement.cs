@@ -7,8 +7,8 @@ public class NPCManagement : MonoBehaviour
     private List<Vector3> NPCositions = new List<Vector3> {
         new Vector3(-2.3f, -2.25f, 0),
         new Vector3(-3.16f, 4.04f, 0),
-        new Vector3(7.9f, -4.39f, 0),
-        new Vector3(13.1f, -0.13f, 0),
+        new Vector3(7.21f, -4.69f, 0),
+        new Vector3(13.54f, -0.13f, 0),
         new Vector3(-10.28f, -3.96f, 0)
     };
     // Start is called once before the first execution of Update after the MonoBehaviour is created
