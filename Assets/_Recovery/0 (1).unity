@@ -210,6 +210,33 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &130424440 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 108753890036832669, guid: 1bfd581036ca6d043842fe2dde3bb589, type: 3}
+  m_PrefabInstance: {fileID: 3045311748920321493}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &130424441
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 130424440}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fa4d411ab05ff8041840f398f4a9097f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &188595718
 GameObject:
   m_ObjectHideFlags: 0
@@ -981,33 +1008,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &576350379 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5985083983864146919, guid: 1bfd581036ca6d043842fe2dde3bb589, type: 3}
-  m_PrefabInstance: {fileID: 3045311748920321493}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &576350381
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 576350379}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: fa4d411ab05ff8041840f398f4a9097f, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -3173,17 +3173,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8173889243280589235, guid: 1bfd581036ca6d043842fe2dde3bb589, type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 576350381}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5985083983864146919, guid: 1bfd581036ca6d043842fe2dde3bb589, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 108753890036832669, guid: 1bfd581036ca6d043842fe2dde3bb589, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 576350381}
+      addedObject: {fileID: 130424441}
   m_SourcePrefab: {fileID: 100100000, guid: 1bfd581036ca6d043842fe2dde3bb589, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
