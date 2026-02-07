@@ -1,0 +1,20 @@
+:root {
+}
+
+.unity-progress-bar__background {
+    background-color: rgb(226, 188, 115);
+    border-width: 0;
+}
+
+.unity-progress-bar__progress {
+    background-color: rgb(50, 78, 104);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.unity-label {
+    color: rgb(50, 78, 104);
+    -unity-font-definition: url("project://database/Assets/UI/Font/DepartureMono-Regular.otf?fileID=12800000&guid=09d6de26969ea47349ceb81540318594&type=3#DepartureMono-Regular");
+}
