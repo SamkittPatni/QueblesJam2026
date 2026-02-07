@@ -67,7 +67,7 @@ public class HungryCatObject : MonoBehaviour
     }
 
     private IEnumerator Transition() { 
-    yield return new WaitForSeconds(5f);
+    yield return new WaitForSeconds(5f);    
     StartCoroutine(Movement(StartPosition, OnScreenPosition));
     }
 }
