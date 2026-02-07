@@ -28,6 +28,12 @@ public class CashierMiniGameInput : MonoBehaviour
 
     private List<float> ItemCost = new List<float>{239f, 450f, 187f};
     private List<float> CustomerMoney = new List<float>{381f, 492f, 957f};
+    public TMP_Text dialogueText; // Reference to a TextMeshPro text element to display dialogue
+    public GameObject dialoguePanel; // Reference to a UI panel for dialogue
+    public GameObject dialogueCharacter; // Reference to a UI element for the character portrait in dialogue
+    public GameObject transparentScreen;
+
+    private bool success = false;
     void Start()
     {
         inputUser.interactable=false;
@@ -81,39 +87,6 @@ public class CashierMiniGameInput : MonoBehaviour
         inputUser.interactable=false;
 
         StartCoroutine(Transition());
-        /*
-        if (num == 1)
-        {
-            // Check User Answer
-            DestroyImmediate(customerItem1, true);
-            DestroyImmediate(costTag1, true);
-            if (true)
-            {
-                score++;
-            }
-            StartCoroutine(GameSetUp(customerItem2, costTag2, "68"));
-        }
-        else if (num == 2)
-        {
-            // Check User Answer
-            DestroyImmediate(customerItem2, true);
-            DestroyImmediate(costTag2, true);
-            if (true)
-            {
-                score++;
-            }
-            StartCoroutine(GameSetUp(customerItem3, costTag3, "69"));
-        }
-        else if (num == 3)
-        {
-            // Check User Answer
-            if (true)
-            {
-                score++;
-            }
-            Debug.Log("Game Over");
-        }
-        */
     }
 
     private IEnumerator GameSetUp(GameObject itemLocal, GameObject costTagLocal, string value)
@@ -141,6 +114,17 @@ public class CashierMiniGameInput : MonoBehaviour
         }
         else if (num==3)
         {
+            float trustReward=0f; // Formula for Score to Trust
+            if (trustReward > 0)
+            {
+                success = true;
+            }
+            else
+            {
+                success = false;
+            }
+
+            StartCoroutine(PlayDialogue(success));
             Debug.Log("Game Over");
         }
     }
@@ -150,5 +134,22 @@ public class CashierMiniGameInput : MonoBehaviour
         paymentText.SetText(message);
         inputUser.text = "bingus";
         yield return new WaitForSeconds(value);
+    }
+
+    private IEnumerator PlayDialogue(bool success)
+    {
+        transparentScreen.SetActive(true);
+        dialogueCharacter.SetActive(true);
+        yield return new WaitForSeconds(0.5f); // Wait for the panel to appear
+        dialoguePanel.SetActive(true);
+        yield return new WaitForSeconds(0.5f); // Wait for the dialogue to appear
+        if (success)
+        {
+            dialogueText.text = "Thank you!";
+        }
+        else
+        {
+            dialogueText.text = "I think you shorted me....";
+        }
     }
 }
