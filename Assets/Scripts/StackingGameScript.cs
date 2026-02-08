@@ -206,7 +206,7 @@ public void RemoveLastBlock()
                 continue; 
             }
 
-            // ff we got here, the block is stable! eat it.
+            // ff we got here, the block is stable! 
             Debug.Log("The cat ate a stable block: " + child.name);
             Destroy(child.gameObject);
             //RemoveLife();
