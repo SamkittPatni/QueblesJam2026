@@ -106,6 +106,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CashierMiniGameObject
   speed: 4
   Duration: 0.5
-  StartPosition: {x: 10.76, y: -3.27, z: 0}
-  OnScreenPosition: {x: 7.5, y: -3.27, z: 0}
-  ExitPosition: {x: 10.76, y: -3.27, z: 0}
+  StartPosition: {x: 10.76, y: -2.5, z: 0}
+  OnScreenPosition: {x: 6, y: -2.5, z: 0}
+  ExitPosition: {x: 10.76, y: -2.5, z: 0}
