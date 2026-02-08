@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using TMPro;
 using System.Threading;
+using UnityEngine.SceneManagement;
 
 public class MazeManager : MonoBehaviour
 {
@@ -9,9 +10,9 @@ public class MazeManager : MonoBehaviour
     public float mazeTimeLimit = 60f; // Time limit for the maze in seconds
     public float startTime;
     public bool isComplete = false; // Flag to check if the maze is completed
-    private float trustReward = 10f; // Amount of trust to reward on successful completion
+    private float trustReward = 20f; // Amount of trust to reward on successful completion
 
-    private float trustPenalty = -5f; // Amount of trust to penalize on failure
+    private float trustPenalty = -20f; // Amount of trust to penalize on failure
 
     public TMP_Text timerText; // Reference to a TextMeshPro text element to display the timer
 
@@ -43,14 +44,14 @@ public class MazeManager : MonoBehaviour
             timerText.text = "00:00";
             Debug.Log("Maze failed!");
             StartCoroutine(PlayDialogue(false)); // Play failure dialogue
-            // GameManager.Instance.AddTrust(trustPenalty);
+            GameManager.Instance.AddTrust(trustPenalty);
         }
         // Check if the maze is completed successfully within the time limit
         else if (isComplete)
         {
             Debug.Log("Maze completed successfully!");
             StartCoroutine(PlayDialogue(true)); // Play success dialogue
-            // GameManager.Instance.AddTrust(trustReward); // Reward trust points to the player
+            GameManager.Instance.AddTrust(trustReward); // Reward trust points to the player
         }
     }
 
@@ -69,6 +70,8 @@ public class MazeManager : MonoBehaviour
         {
             dialogueText.text = "Oh no! You failed the maze!";
         }
+        yield return new WaitForSeconds(3f); // Display dialogue for 3 seconds
+        SceneManager.LoadScene(1); // Load the main scene after failure
     }
 
     public void CompleteMaze()
