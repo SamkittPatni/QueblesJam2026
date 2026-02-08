@@ -199,6 +199,7 @@ MonoBehaviour:
   blockHolder: {fileID: 944398124}
   livesText: {fileID: 1116390833}
   timerText: {fileID: 1566542609}
+  playing: 1
   InputSystem_Actions:
     m_Name: Input System_Actions
     m_Type: 0
@@ -689,6 +690,7 @@ MonoBehaviour:
   buttonText: {fileID: 758964264}
   catScript: {fileID: 2066881325}
   bigScaleMult: 1
+  gameManager: {fileID: 206352730}
 --- !u!114 &894495345
 MonoBehaviour:
   m_ObjectHideFlags: 0
