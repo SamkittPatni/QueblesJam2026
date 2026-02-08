@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance; // Singleton instance
     public int week = 0;
     public float trust = 0f;
+
+    public bool playedMinigame = false;
     private void Awake()
     {
         if (Instance != null)
@@ -18,6 +20,7 @@ public class GameManager : MonoBehaviour
 
         // Every time the scene loads, increment the week counter
         week++;
+        playedMinigame = false; // Reset minigame state for the new week
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
