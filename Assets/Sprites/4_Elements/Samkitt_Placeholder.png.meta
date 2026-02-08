@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 87b4b213e4b08ab42b6debf2ac90d823
+guid: eeebf5167fd635f40a225d792a722c3c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4477517994534293285
-    second: Screenshot (2044) (1)_0
+      213: -572044088719020565
+    second: Samkitt_Placeholder_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Screenshot (2044) (1)_0
+      name: Samkitt_Placeholder_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 1335
-        height: 1335
+        y: 298
+        width: 2048
+        height: 1452
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bd03d5c5b19acd1c0800000000000000
-      internalID: -4477517994534293285
+      spriteID: bed6a00aee0bf08f0800000000000000
+      internalID: -572044088719020565
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Screenshot (2044) (1)_0: -4477517994534293285
+      Samkitt_Placeholder_0: -572044088719020565
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
