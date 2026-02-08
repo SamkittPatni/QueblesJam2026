@@ -21,6 +21,8 @@ public class GameManager : MonoBehaviour
 
     public bool pauseTimer;
 
+    public GameObject GameUI;
+
     private Label timerLabel;
     private Label weekLabel;
     private ProgressBar trustBar;
@@ -47,7 +49,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         // Get UIDocument on this game object
-        UIDocument uiDocument = GetComponent<UIDocument>();
+        UIDocument uiDocument = GameUI.GetComponent<UIDocument>();
 
         // Get the root of the visual tree
         VisualElement root = uiDocument.rootVisualElement;
@@ -61,11 +63,11 @@ public class GameManager : MonoBehaviour
 
         pauseTimer = false;
         playedMinigame = false; // Reset minigame state for the new week
-        if (startTime >= weekDuration)
-        {
-            startTime = 0f;
-            week++;   
-        }
+        // if (startTime >= weekDuration)
+        // {
+        //     startTime = 0f;
+        //     week++;   
+        // }
         
         // Display week day
         weekLabel.text = $"WEEK {week}";
@@ -91,6 +93,15 @@ public class GameManager : MonoBehaviour
             timerLabel.text = timeText;
 
             
+        }
+
+        if (startTime >= weekDuration)
+        {
+            startTime = 0f;
+            week++;
+            pauseTimer = false; // Reset pause state for the new week
+            playedMinigame = false; // Reset minigame state for the new week
+            weekLabel.text = $"WEEK {week}"; // Update week display
         }
 
         Debug.Log("Week: " + week + " Time: " + minutes + ":" + seconds);

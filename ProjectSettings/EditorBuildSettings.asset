@@ -6,8 +6,38 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/OpeningCutsceneScene.unity
+    guid: ddeb5e8ba83717a4bb5cedf4e7c01d40
+  - enabled: 1
     path: Assets/Scenes/StoreScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/StackingGameInstructionScene.unity
+    guid: c93ee69f83f743f4ca0d3d2f506ec7ec
+  - enabled: 1
+    path: Assets/Scenes/CashierGameInstructionScene.unity
+    guid: b6efe53bb850b9340952c246afc1b5dd
+  - enabled: 1
+    path: Assets/Scenes/MazeMiniGameInstructionScene.unity
+    guid: 4da4f58a7262a0345b244c6bedf222f4
+  - enabled: 1
+    path: Assets/Scenes/StackingGameScene.unity
+    guid: 0bb9113391f4d4b4ea8e6f0a23c8a783
+  - enabled: 1
+    path: Assets/Scenes/CashierMiniGameSceneRecovered.unity
+    guid: 9c924ee31365e52499c16b250144469f
+  - enabled: 1
+    path: Assets/Scenes/MazeMiniGameScene.unity
+    guid: 9dbee9b9db134c0418bdc437a7047d84
+  - enabled: 1
+    path: Assets/Scenes/Ending1Scene.unity
+    guid: 2f2b836b9a7e8dd4b91a63d747324d86
+  - enabled: 1
+    path: Assets/Scenes/Ending2Scene.unity
+    guid: cc68749b4c2611c489058056108ada76
+  - enabled: 1
+    path: Assets/Scenes/Ending3Scene.unity
+    guid: 3dcd13935be2a7846a783468267d9207
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 3b36cef144138864bbdc458f22705f1f, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
