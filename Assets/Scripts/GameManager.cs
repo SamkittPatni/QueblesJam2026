@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     private int minutes;
     private int seconds;
 
+    public string timeText;
+
     public bool playedMinigame = false;
 
     public bool pauseTimer;
@@ -51,6 +53,7 @@ public class GameManager : MonoBehaviour
             startTime += Time.deltaTime;
             minutes = Mathf.FloorToInt((weekDuration - startTime) / 60);
             seconds = Mathf.FloorToInt((weekDuration - startTime) % 60);   
+            timeText = string.Format("{0:0}:{1:00}", minutes, seconds);
         }
         Debug.Log("Week: " + week + " Time: " + minutes + ":" + seconds);
     }
