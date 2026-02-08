@@ -104,14 +104,8 @@ public class GameManager : MonoBehaviour
             weekLabel.text = $"WEEK {week}"; // Update week display
         }
 
+        trustBar.value = trust; // Update trust bar value
         Debug.Log("Week: " + week + " Time: " + minutes + ":" + seconds);
-    }
-
-    private IEnumerator EndWeek()
-    {
-        yield return new WaitForSeconds(180f); // Wait for 180 seconds (3 minute)
-        Debug.Log("Week " + week + " ended. Trust: " + trust);
-        // Here you can add logic to transition to the next week, reset NPCs, etc.
     }
 
     public void AddTrust(float amount)
