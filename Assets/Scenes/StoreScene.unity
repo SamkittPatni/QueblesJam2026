@@ -3557,6 +3557,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   week: 0
   trust: 0
+  playedMinigame: 0
 --- !u!4 &1469546226
 Transform:
   m_ObjectHideFlags: 0
