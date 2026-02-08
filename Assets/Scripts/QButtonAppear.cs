@@ -9,6 +9,8 @@ public class QButtonAppear : MonoBehaviour
 
     [SerializeField] private float bigScaleMult = 1.3f;
 
+    [SerializeField] private StackingGameManager gameManager;
+
     private Vector3 baseScale;
     private Vector3 growScale = new Vector3(0.14f, 0.14f, 0f); // Adjust to your needs
     private Vector3 positionOnScreen = new Vector3(7.61f, -1.07f, 0.0f);
@@ -21,6 +23,7 @@ public class QButtonAppear : MonoBehaviour
     {
         baseScale = transform.localScale;
         transform.position = positionOffScreen;
+        buttonText.text = "";
 
         ///StartCoroutine(ButtonRoutine());
         ///
@@ -29,7 +32,15 @@ public class QButtonAppear : MonoBehaviour
 
     void Update()
     {
-        StartCoroutine(ButtonRoutine());
+        if (gameManager.playing == true)
+        {
+            StartCoroutine(ButtonRoutine());
+        }
+        if (gameManager.playing == false)
+        {
+            buttonText.text = "";
+            transform.position = positionOffScreen;
+        }
     }
 
     private IEnumerator ButtonRoutine()
@@ -37,7 +48,7 @@ public class QButtonAppear : MonoBehaviour
         {
             yield return new WaitUntil(() => catScript != null && catScript.CatOnScreen);
             {
-                Debug.Log("bruh moment");
+                //Debug.Log("bruh moment");
                 transform.position = positionOnScreen; // mmoves button icon on screen with cat icon.
                 buttonText.text = "[Q]"; // makes the button text appear when the cat is on screen.
                 while (catScript.CatOnScreen)

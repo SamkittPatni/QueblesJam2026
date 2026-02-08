@@ -23,7 +23,8 @@ public class StackingGameManager : MonoBehaviour
     /// </summary>
     private int startingLives = 3;
     private int livesRemaining;
-    private bool playing = true;
+    public bool playing;
+
 
     private float stackingGameTimeLimit = 120f; /// 10f ~ 13 seconds
 
@@ -98,6 +99,7 @@ public class StackingGameManager : MonoBehaviour
 
     void Start()
     {
+        playing = true;
         livesRemaining = startingLives;
         livesText.text = $"Lives: {livesRemaining}";
         SpawnNewBlock();
