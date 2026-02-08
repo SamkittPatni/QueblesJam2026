@@ -27,7 +27,7 @@ public class StackingGameManager : MonoBehaviour
     public bool playing;
 
 
-    private float stackingGameTimeLimit = 120f; /// 10f ~ 13 seconds
+    private float stackingGameTimeLimit = 45f; /// 10f ~ 13 seconds
 
     public InputAction InputSystem_Actions;
 
@@ -252,6 +252,8 @@ public void RemoveLastBlock()
             dialogueText.text = "Oh no! You failed the maze!";
         }
         yield return new WaitForSeconds(3f); // Display dialogue for 3 seconds
+        FindAnyObjectByType<PlayerInput>().gameObject.SetActive(false);
+        GameManager.Instance.pauseTimer = false; // Unpause the week timer after the maze minigame ends
         SceneManager.LoadScene(1); // Load the main scene after failure
     }
 }

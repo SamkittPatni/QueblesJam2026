@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class TransitionManager : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class TransitionManager : MonoBehaviour
 
     void OnSubmit()
     {
+        FindAnyObjectByType<PlayerInput>().gameObject.SetActive(false);
         SceneManager.LoadScene(sceneToLoad); // Load the specified scene
     }
 }

@@ -3,6 +3,7 @@ using UnityEngine;
 using TMPro;
 using System.Threading;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class MazeManager : MonoBehaviour
 {
@@ -71,6 +72,8 @@ public class MazeManager : MonoBehaviour
             dialogueText.text = "Oh no! You failed the maze!";
         }
         yield return new WaitForSeconds(3f); // Display dialogue for 3 seconds
+        FindAnyObjectByType<PlayerInput>().gameObject.SetActive(false);
+        GameManager.Instance.pauseTimer = false; // Unpause the week timer after the maze minigame ends
         SceneManager.LoadScene(1); // Load the main scene after failure
     }
 
