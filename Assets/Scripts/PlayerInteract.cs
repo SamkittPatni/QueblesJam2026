@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class PlayerInteract : MonoBehaviour
 {
@@ -197,6 +198,7 @@ public class PlayerInteract : MonoBehaviour
         transparentScreen.SetActive(false);
         dialogueCharacter.SetActive(false);
         // Here you would load the minigame scene or trigger the minigame logic
+        FindAnyObjectByType<PlayerInput>().gameObject.SetActive(false);
         SceneManager.LoadScene(sceneNumber);        
     }
 }

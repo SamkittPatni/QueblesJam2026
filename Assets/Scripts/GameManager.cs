@@ -111,5 +111,13 @@ public class GameManager : MonoBehaviour
     public void AddTrust(float amount)
     {
         trust += amount;
+        if (trust < 0f)
+        {
+            trust = 0f; // Ensure trust doesn't go below 0
+        }
+        else if (trust > 100f)
+        {
+            trust = 100f; // Ensure trust doesn't exceed 100
+        }
     }
 }

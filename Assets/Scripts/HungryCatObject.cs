@@ -43,7 +43,7 @@ public class HungryCatObject : MonoBehaviour
 
     ///void Awake()
     ///{
-       /// scaleChange = new Vector3(0.01f, 0.01f, 0f);
+    /// scaleChange = new Vector3(0.01f, 0.01f, 0f);
     ///}
 
     void Start()
@@ -53,8 +53,14 @@ public class HungryCatObject : MonoBehaviour
         ////baseScale = transform.localScale;
     }
 
-    
-    
+    void Update()
+    {
+        if (gameManager.playing == false)
+        {
+            Movement(OnScreenPosition, ExitPosition);
+        }
+    }
+
     public IEnumerator Movement(Vector3 positionA, Vector3 positionB)
     {
         timePassed = 0f;
@@ -115,9 +121,16 @@ public class HungryCatObject : MonoBehaviour
         Debug.Log("Scared away! Timer stopped.");
         yield return StartCoroutine(Movement(OnScreenPosition, ExitPosition));
         CatOnScreen = false;
-        yield return new WaitForSeconds(5f);   
-        
-        StartCoroutine(ArrivalSequence());
+        yield return new WaitForSeconds(5f);
+
+        if (gameManager != null && gameManager.playing)
+        {
+            StartCoroutine(ArrivalSequence());
+        }
+        else
+        {
+            Debug.Log("Game Stopped: Cat will no longer appear.");
+        }
     }
 
     private IEnumerator HungerTimer()
@@ -125,7 +138,7 @@ public class HungryCatObject : MonoBehaviour
         yield return new WaitForSeconds(5f);
 
 
-        if (gameManager != null)
+        if (gameManager != null && gameManager.playing == true)
         {
             gameManager.RemoveLastBlock();
             Debug.Log("The cat was too hungry! Block removed.");
@@ -134,7 +147,11 @@ public class HungryCatObject : MonoBehaviour
 
     IEnumerator ArrivalSequence()
     {
-        
+        if (gameManager == null || !gameManager.playing)
+        {
+            yield break;
+        }
+
         yield return StartCoroutine(Movement(StartPosition, OnScreenPosition));
 
         hungerTimer = StartCoroutine(HungerTimer());

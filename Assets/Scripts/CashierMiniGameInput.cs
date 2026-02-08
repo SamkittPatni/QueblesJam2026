@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class CashierMiniGameInput : MonoBehaviour
 {
@@ -153,5 +154,8 @@ public class CashierMiniGameInput : MonoBehaviour
         {
             dialogueText.text = "I think you shorted me....are you a cat?";
         }
+        yield return new WaitForSeconds(3f); // Display dialogue for 3 seconds
+        GameManager.Instance.pauseTimer = false; // Unpause the week timer after the maze minigame ends
+        SceneManager.LoadScene(1);
     }
 }
