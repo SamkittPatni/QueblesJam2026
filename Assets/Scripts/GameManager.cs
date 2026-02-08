@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UIElements;
 
 public class GameManager : MonoBehaviour
 {
@@ -19,6 +20,15 @@ public class GameManager : MonoBehaviour
     public bool playedMinigame = false;
 
     public bool pauseTimer;
+
+    private Label timerLabel;
+    private Label weekLabel;
+    private ProgressBar trustBar;
+
+    // Include in TODO LIST
+    // 1. Task of the day
+    // 2. Talk to customers to gain trust
+    
     private void Awake()
     {
         if (Instance != null)
@@ -32,9 +42,23 @@ public class GameManager : MonoBehaviour
         // Every time the scene loads, increment the week counter
         // week++;
     }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        // Get UIDocument on this game object
+        UIDocument uiDocument = GetComponent<UIDocument>();
+
+        // Get the root of the visual tree
+        VisualElement root = uiDocument.rootVisualElement;
+
+        // Find element by name
+        timerLabel = root.Q<Label>("TimerDisplay");
+        weekLabel = root.Q<Label>("WeekDayDisplay");
+        trustBar = root.Q<ProgressBar>("TrustBar");
+
+        
+
         pauseTimer = false;
         playedMinigame = false; // Reset minigame state for the new week
         if (startTime >= weekDuration)
@@ -42,6 +66,14 @@ public class GameManager : MonoBehaviour
             startTime = 0f;
             week++;   
         }
+        
+        // Display week day
+        weekLabel.text = $"WEEK {week}";
+
+        // Assign trust value to progress bar
+        // TODO: change assigning value to {trust} variable
+        trustBar.value = 20f;
+
         // StartCoroutine(EndWeek());
     }
 
@@ -54,7 +86,13 @@ public class GameManager : MonoBehaviour
             minutes = Mathf.FloorToInt((weekDuration - startTime) / 60);
             seconds = Mathf.FloorToInt((weekDuration - startTime) % 60);   
             timeText = string.Format("{0:0}:{1:00}", minutes, seconds);
+
+            // Display timeText inside the TimerDisplay
+            timerLabel.text = timeText;
+
+            
         }
+
         Debug.Log("Week: " + week + " Time: " + minutes + ":" + seconds);
     }
 
