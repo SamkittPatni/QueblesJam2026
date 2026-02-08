@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlayerInteract : MonoBehaviour
 {
@@ -22,7 +23,7 @@ public class PlayerInteract : MonoBehaviour
             {
                 // Trigger minigame for week 1
                 Debug.Log("Starting minigame for week 1");
-                StartCoroutine(PlayMinigame(dialogueCharacters[1], dialogue: "Minigame for week 1!"));
+                StartCoroutine(PlayMinigame(dialogueCharacters[1], dialogue: "Minigame for week 1!", sceneNumber: 2));
                 GameManager.Instance.playedMinigame = true;
                 return;
             }
@@ -30,7 +31,7 @@ public class PlayerInteract : MonoBehaviour
             {
                 // Trigger minigame for week 2
                 Debug.Log("Starting minigame for week 2");
-                StartCoroutine(PlayMinigame(dialogueCharacters[10], dialogue: "Minigame for week 2!"));
+                StartCoroutine(PlayMinigame(dialogueCharacters[10], dialogue: "Minigame for week 2!", sceneNumber: 3));
                 GameManager.Instance.playedMinigame = true;
                 return;
             }
@@ -38,7 +39,7 @@ public class PlayerInteract : MonoBehaviour
             {
                 // Trigger minigame for week 3
                 Debug.Log("Starting minigame for week 3");
-                StartCoroutine(PlayMinigame(dialogueCharacters[13], dialogue: "Minigame for week 3!"));
+                StartCoroutine(PlayMinigame(dialogueCharacters[13], dialogue: "Minigame for week 3!", sceneNumber: 4));
                 GameManager.Instance.playedMinigame = true;
                 return;
             }
@@ -181,7 +182,7 @@ public class PlayerInteract : MonoBehaviour
         dialogueCharacter.SetActive(false);
     }
 
-    IEnumerator PlayMinigame(GameObject dialogueCharacter, string dialogue)
+    IEnumerator PlayMinigame(GameObject dialogueCharacter, string dialogue, int sceneNumber)
     {
         GameManager.Instance.pauseTimer = true; // Pause the week timer when starting the minigame
         transparentScreen.SetActive(true);
@@ -196,6 +197,6 @@ public class PlayerInteract : MonoBehaviour
         transparentScreen.SetActive(false);
         dialogueCharacter.SetActive(false);
         // Here you would load the minigame scene or trigger the minigame logic
-        Debug.Log("Minigame would start now!");
+        SceneManager.LoadScene(sceneNumber);        
     }
 }

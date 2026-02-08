@@ -1,6 +1,8 @@
 using UnityEngine;
 using System.Collections;
 using TMPro;
+using UnityEngine.SceneManagement;
+
 public class IntroManager : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -53,7 +55,7 @@ public class IntroManager : MonoBehaviour
         yield return new WaitForSeconds(3f);
         dialogueText.text = "";
         dialogueBox.SetActive(false);
-
+        SceneManager.LoadScene(1);
         
     }
 }

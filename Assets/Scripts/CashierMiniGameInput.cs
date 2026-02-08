@@ -69,7 +69,7 @@ public class CashierMiniGameInput : MonoBehaviour
         if (CustomerMoney[num-1]-ItemCost[num-1]==float.Parse(Input))
         {
             StartCoroutine(WaitLowk(2f, "yay!"));
-            score += 7;
+            score += 2;
         }
         else
         {
@@ -114,13 +114,15 @@ public class CashierMiniGameInput : MonoBehaviour
         }
         else if (num==3)
         {
-            float trustReward=0f; // Formula for Score to Trust
-            if (trustReward > 0)
+            
+            if (score > 0)
             {
                 success = true;
+                //GameManger.Instance.AddTrust(20f);
             }
             else
             {
+                //GameManger.Instance.AddTrust(-20f);
                 success = false;
             }
 
@@ -145,11 +147,11 @@ public class CashierMiniGameInput : MonoBehaviour
         yield return new WaitForSeconds(0.5f); // Wait for the dialogue to appear
         if (success)
         {
-            dialogueText.text = "Thank you!";
+            dialogueText.text = "Wow, you calculated the change perfectly, no way a cat could do that!";
         }
         else
         {
-            dialogueText.text = "I think you shorted me....";
+            dialogueText.text = "I think you shorted me....are you a cat?";
         }
     }
 }
