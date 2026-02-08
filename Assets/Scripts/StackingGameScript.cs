@@ -42,6 +42,7 @@ public class StackingGameManager : MonoBehaviour
         yield return new WaitForSeconds(timeBetweenRounds);
         SpawnNewBlock();
     }
+    /*
     private void OnDrop()
     {
         ///Debug.Log("67676767");
@@ -56,6 +57,29 @@ public class StackingGameManager : MonoBehaviour
             StartCoroutine(DelayedSpawn());
         }
     }
+    */
+    private void OnDrop()
+{
+    // 1. Only allow the drop if we actually have a block to drop
+    if (currentBlock != null && playing)
+    {
+        // Stop the horizontal movement immediately
+        // By setting currentBlock to null first, the Update() loop 
+        // will stop moving it before the next frame.
+        Transform blockToDrop = currentBlock;
+        currentBlock = null; 
+
+        // 2. Activate gravity
+        Rigidbody2D rb = blockToDrop.GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.simulated = true;
+        }
+
+        // 3. Spawn next block after the delay
+        StartCoroutine(DelayedSpawn());
+    }
+}
     private Transform currentBlock = null;
     private Rigidbody2D currentRigidbody;
 
@@ -151,26 +175,42 @@ public class StackingGameManager : MonoBehaviour
             catScript.StartCoroutine(catScript.Transition());
         }
     }
-    public void RemoveLastBlock()
+
+public void RemoveLastBlock()
+{
+    for (int i = blockHolder.childCount - 1; i >= 0; i--)
     {
-        // Check if there are any blocks to remove
-        if (blockHolder.childCount > 0)
+        Transform child = blockHolder.GetChild(i);
+
+        if (child == currentBlock) continue;
+
+        if (child.name.Contains("(Clone)"))
         {
-            // Get the very last block that was spawned
-            Transform lastBlock = blockHolder.GetChild(blockHolder.childCount - 1);
+            // 1. Get the Rigidbody to check how fast it's moving
+            Rigidbody2D rb = child.GetComponent<Rigidbody2D>();
 
-            Debug.Log("The cat ate a tuna can! Removing: " + lastBlock.name);
+            // 2. STABILITY CHECK: 
+            // If the block is moving faster than a tiny amount (0.1), 
+            // it's falling or sliding. SKIP IT.
+            if (rb != null && rb.linearVelocity.magnitude > 0.1f)
+            {
+                continue; 
+            }
 
-            // Destroy the block object
-            Destroy(lastBlock.gameObject);
+            // 3. If we got here, the block is stable! Eat it.
+            Debug.Log("The cat ate a stable block: " + child.name);
+            Destroy(child.gameObject);
+            //RemoveLife();
 
-            // Optional: Subtract a life or play a sound
-            RemoveLife();
-        }
-        else
-        {
-            Debug.Log("No tuna cans left for the cat to eat!");
+            if (catScript != null)
+            {
+                catScript.StartCoroutine(catScript.Transition());
+            }
+            return; 
         }
     }
+
+    Debug.Log("No stable blocks found for the cat to steal!");
+}
 }
 

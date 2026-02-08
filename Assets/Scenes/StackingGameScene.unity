@@ -1891,6 +1891,7 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  gameManager: {fileID: 206352730}
   speed: 4
   Duration: 0.5
   StartPosition: {x: 7.59, y: -6.55, z: 0}
