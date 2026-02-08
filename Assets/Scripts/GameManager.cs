@@ -4,10 +4,21 @@ using System.Collections;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance; // Singleton instance
-    public int week = 0;
+    public int week = 1;
     public float trust = 0f;
 
+    public float startTime;
+
+    public float weekDuration = 180f; // Duration of each week in seconds
+
+    private int minutes;
+    private int seconds;
+
+    public string timeText;
+
     public bool playedMinigame = false;
+
+    public bool pauseTimer;
     private void Awake()
     {
         if (Instance != null)
@@ -19,19 +30,32 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         // Every time the scene loads, increment the week counter
-        week++;
-        playedMinigame = false; // Reset minigame state for the new week
+        // week++;
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        StartCoroutine(EndWeek());
+        pauseTimer = false;
+        playedMinigame = false; // Reset minigame state for the new week
+        if (startTime >= weekDuration)
+        {
+            startTime = 0f;
+            week++;   
+        }
+        // StartCoroutine(EndWeek());
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (!pauseTimer)
+        {
+            startTime += Time.deltaTime;
+            minutes = Mathf.FloorToInt((weekDuration - startTime) / 60);
+            seconds = Mathf.FloorToInt((weekDuration - startTime) % 60);   
+            timeText = string.Format("{0:0}:{1:00}", minutes, seconds);
+        }
+        Debug.Log("Week: " + week + " Time: " + minutes + ":" + seconds);
     }
 
     private IEnumerator EndWeek()

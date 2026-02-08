@@ -183,6 +183,7 @@ public class PlayerInteract : MonoBehaviour
 
     IEnumerator PlayMinigame(GameObject dialogueCharacter, string dialogue)
     {
+        GameManager.Instance.pauseTimer = true; // Pause the week timer when starting the minigame
         transparentScreen.SetActive(true);
         dialogueCharacter.SetActive(true);
         yield return new WaitForSeconds(0.5f); // Wait for the panel to appear

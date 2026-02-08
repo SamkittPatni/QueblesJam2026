@@ -3555,9 +3555,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a3be44b158c8ff419e610e57fd2f028, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  week: 0
+  week: 1
   trust: 0
+  startTime: 0
+  weekDuration: 180
   playedMinigame: 0
+  pauseTimer: 0
 --- !u!4 &1469546226
 Transform:
   m_ObjectHideFlags: 0
