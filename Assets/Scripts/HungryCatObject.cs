@@ -57,7 +57,7 @@ public class HungryCatObject : MonoBehaviour
     {
         if (gameManager.playing == false)
         {
-            Movement(OnScreenPosition, ExitPosition)
+            Movement(OnScreenPosition, ExitPosition);
         }
     }
 

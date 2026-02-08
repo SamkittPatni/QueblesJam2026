@@ -3,6 +3,7 @@ using System.Runtime.CompilerServices;
 using UnityEngine.InputSystem;
 using UnityEngine;
 using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
 ///https://www.youtube.com/watch?v=VqHaDUXJsyg tutorial
 
 public class StackingGameManager : MonoBehaviour
@@ -29,6 +30,11 @@ public class StackingGameManager : MonoBehaviour
     private float stackingGameTimeLimit = 120f; /// 10f ~ 13 seconds
 
     public InputAction InputSystem_Actions;
+
+    public GameObject transparentScreen;
+    public GameObject dialoguePanel;
+    public GameObject dialogueCharacter;
+    public TMPro.TextMeshProUGUI dialogueText;
 
 
     private void OnEnable()
@@ -96,6 +102,8 @@ public class StackingGameManager : MonoBehaviour
 
     private float blockStartTime = 0f;
 
+    private bool success = false;
+
 
     void Start()
     {
@@ -156,6 +164,11 @@ public class StackingGameManager : MonoBehaviour
         }
         /// temporarily assign a key to restart the game
         /// note - no code here as we do not need to add a button to exit the game.
+        
+        if (!playing)
+        {
+            StartCoroutine(PlayDialogue(success));
+        }
     }
     public void RemoveLife()
     {   /// update the lives remaining UI element
@@ -165,15 +178,16 @@ public class StackingGameManager : MonoBehaviour
         if (livesRemaining == 0)
         {
             playing = false;
-            GameManager.Instance.AddTrust(-30f); /// lose condition
+            GameManager.Instance.AddTrust(-20f); /// lose condition
         }
     }
     public void WinGame()
 
     {/// win condition
+        success = true;
         playing = false;
-        GameManager.Instance.AddTrust(30f); // adds trust to overall trust on win
-        Debug.Log("You got 30 trust!");
+        GameManager.Instance.AddTrust(20f); // adds trust to overall trust on win
+        Debug.Log("You got 20 trust!");
     }
 
     private void OnMultitap()
@@ -221,5 +235,24 @@ public void RemoveLastBlock()
 
     Debug.Log("No stable blocks found for the cat to steal!");
 }
+
+    private IEnumerator PlayDialogue(bool success)
+    {
+        transparentScreen.SetActive(true);
+        dialogueCharacter.SetActive(true);
+        yield return new WaitForSeconds(0.5f); // Wait for the panel to appear
+        dialoguePanel.SetActive(true);
+        yield return new WaitForSeconds(0.5f); // Wait for the dialogue to appear
+        if (success)
+        {
+            dialogueText.text = "You completed the maze!";
+        }
+        else
+        {
+            dialogueText.text = "Oh no! You failed the maze!";
+        }
+        yield return new WaitForSeconds(3f); // Display dialogue for 3 seconds
+        SceneManager.LoadScene(1); // Load the main scene after failure
+    }
 }
 
