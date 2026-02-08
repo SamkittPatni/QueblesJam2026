@@ -24,9 +24,14 @@ public class HungryCatObject : MonoBehaviour
     public Vector3 OnScreenPosition;
     public Vector3 ExitPosition;
 
+    public bool CatOnScreen = false; /// is referred to in QButtonAppear script
+
     private float startTime = 0f;
 
-
+    //public float pulseSpeed = 1f;    // How fast it breathes
+    //public float pulseAmount = 0.02f; // How much it grows/shrinks
+    //private Vector3 baseScale;
+    //private Vector3 scaleChange;
 
     private float waitBeforeOnScreen = 2f;
     private float timePassed = 0f;
@@ -35,10 +40,17 @@ public class HungryCatObject : MonoBehaviour
 
     private Coroutine hungerTimer;
 
+
+    ///void Awake()
+    ///{
+       /// scaleChange = new Vector3(0.01f, 0.01f, 0f);
+    ///}
+
     void Start()
     {
         transform.position = StartPosition;
         StartCoroutine(ArrivalSequence());
+        ////baseScale = transform.localScale;
     }
 
     
@@ -64,11 +76,31 @@ public class HungryCatObject : MonoBehaviour
         
     }
 
-   /// public void OnMultitap() {
-      ///  Debug.Log("6767676767");
-        ///StartCoroutine(Movement(OnScreenPosition, ExitPosition));
-       /// StartCoroutine(Transition());
-    ///}
+    //void Update() 
+   // {
+        // Calculate the scale change using a Sine wave
+        // Mathf.Sin returns a value between -1 and 1
+        ////float scaleFactor = Mathf.Sin((Time.time * pulseSpeed) + 1f) * pulseAmount;
+
+        ///float absScaleFactor = Mathf.Abs(scaleFactor);
+
+        ///Debug.Log(absScaleFactor);
+        ///if (absScaleFactor > 0.15)
+        ///{
+            // Apply the scale relative to the base size
+        //    transform.localScale = baseScale += new Vector3(absScaleFactor, absScaleFactor, 0f);
+        //}
+
+      
+        //transform.localScale += scaleChange;
+
+        ///if (transform.localScale.y < 0.1f || transform.localScale.y > 0.12f)
+        ///{
+
+//            scaleChange = -scaleChange;
+       /// }
+
+ //   }
 
     public IEnumerator Transition() {
         Debug.Log("6767676767");
@@ -78,9 +110,13 @@ public class HungryCatObject : MonoBehaviour
             hungerTimer = null;
         }
 
+
+
         Debug.Log("Scared away! Timer stopped.");
         yield return StartCoroutine(Movement(OnScreenPosition, ExitPosition));
-        yield return new WaitForSeconds(5f);    
+        CatOnScreen = false;
+        yield return new WaitForSeconds(5f);   
+        
         StartCoroutine(ArrivalSequence());
     }
 
@@ -98,9 +134,12 @@ public class HungryCatObject : MonoBehaviour
 
     IEnumerator ArrivalSequence()
     {
+        
         yield return StartCoroutine(Movement(StartPosition, OnScreenPosition));
 
         hungerTimer = StartCoroutine(HungerTimer());
+
+        CatOnScreen = true;
     }
 }
 

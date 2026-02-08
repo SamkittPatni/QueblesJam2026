@@ -16,7 +16,7 @@ public class StackingGameManager : MonoBehaviour
     [SerializeField] private TMPro.TextMeshProUGUI livesText;
     [SerializeField] private TMPro.TextMeshProUGUI timerText;
 
-
+    
 
     /// <summary>
     ///  variables to handle the game state
@@ -28,6 +28,8 @@ public class StackingGameManager : MonoBehaviour
     private float stackingGameTimeLimit = 120f; /// 10f ~ 13 seconds
 
     public InputAction InputSystem_Actions;
+
+
     private void OnEnable()
     {
         InputSystem_Actions.Enable();
@@ -97,7 +99,7 @@ public class StackingGameManager : MonoBehaviour
     void Start()
     {
         livesRemaining = startingLives;
-        livesText.text = $"{livesRemaining}";
+        livesText.text = $"Lives: {livesRemaining}";
         SpawnNewBlock();
 
         ////hCatObject.position = catStartPosition;
@@ -106,7 +108,7 @@ public class StackingGameManager : MonoBehaviour
 
     private void SpawnNewBlock()
     {
-        //create a block with the desired properties.
+        //create a block with the desired properties.f
         currentBlock = Instantiate(blockPrefab, blockHolder);
         currentBlock.position = blockStartPosition;
         ///currentBlock.GetComponent<SpriteRenderer>().color = Random.ColorHSV(); /// enable randomly coloured blocks
@@ -132,6 +134,7 @@ public class StackingGameManager : MonoBehaviour
         {
             playing = false;
             Debug.Log("You ran out of time!");
+            GameManager.Instance.AddTrust(-30f); /// lose condition
 
         }
 
@@ -160,16 +163,20 @@ public class StackingGameManager : MonoBehaviour
         if (livesRemaining == 0)
         {
             playing = false;
+            GameManager.Instance.AddTrust(-30f); /// lose condition
         }
     }
     public void WinGame()
 
     {/// win condition
         playing = false;
+        GameManager.Instance.AddTrust(30f); // adds trust to overall trust on win
+        Debug.Log("You got 30 trust!");
     }
 
     private void OnMultitap()
     {
+        
         if (catScript != null)
         {
             catScript.StartCoroutine(catScript.Transition());
@@ -186,18 +193,18 @@ public void RemoveLastBlock()
 
         if (child.name.Contains("(Clone)"))
         {
-            // 1. Get the Rigidbody to check how fast it's moving
+            // get the Rigidbody to check how fast it's moving
             Rigidbody2D rb = child.GetComponent<Rigidbody2D>();
 
-            // 2. STABILITY CHECK: 
+            // stability check: 
             // If the block is moving faster than a tiny amount (0.1), 
-            // it's falling or sliding. SKIP IT.
+            // it's falling or sliding. skip it
             if (rb != null && rb.linearVelocity.magnitude > 0.1f)
             {
                 continue; 
             }
 
-            // 3. If we got here, the block is stable! Eat it.
+            // ff we got here, the block is stable! eat it.
             Debug.Log("The cat ate a stable block: " + child.name);
             Destroy(child.gameObject);
             //RemoveLife();
