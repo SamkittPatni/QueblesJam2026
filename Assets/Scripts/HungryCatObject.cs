@@ -6,16 +6,16 @@ using UnityEngine.InputSystem;
 public class HungryCatObject : MonoBehaviour
 {
 
-    public InputAction InputSystem_Actions;
-    private void OnEnable()
-    {
-        InputSystem_Actions.Enable();
-    }
+    // public InputAction InputSystem_Actions;
+    // private void OnEnable()
+    // {
+    //     InputSystem_Actions.Enable();
+    // }
 
-    private void OnDisable()
-    {
-        InputSystem_Actions.Disable();
-    }
+    // private void OnDisable()
+    // {
+    //     InputSystem_Actions.Disable();
+    // }
 
     public float speed = 4f;
     public float Duration = 0.5f;

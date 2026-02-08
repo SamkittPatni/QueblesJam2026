@@ -45,19 +45,27 @@ public class MazeManager : MonoBehaviour
             timerText.text = "00:00";
             Debug.Log("Maze failed!");
             StartCoroutine(PlayDialogue(false)); // Play failure dialogue
-            GameManager.Instance.AddTrust(trustPenalty);
+            // GameManager.Instance.AddTrust(trustPenalty);
         }
         // Check if the maze is completed successfully within the time limit
         else if (isComplete)
         {
             Debug.Log("Maze completed successfully!");
             StartCoroutine(PlayDialogue(true)); // Play success dialogue
-            GameManager.Instance.AddTrust(trustReward); // Reward trust points to the player
+            // GameManager.Instance.AddTrust(trustReward); // Reward trust points to the player
         }
     }
 
     private IEnumerator PlayDialogue(bool success)
     {
+        if (success)
+        {
+            GameManager.Instance.AddTrust(trustReward);
+        }
+        else
+        {
+            GameManager.Instance.AddTrust(trustPenalty);
+        }
         transparentScreen.SetActive(true);
         dialogueCharacter.SetActive(true);
         yield return new WaitForSeconds(0.5f); // Wait for the panel to appear

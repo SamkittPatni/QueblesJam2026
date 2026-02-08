@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class GameManager : MonoBehaviour
 
     public float startTime;
 
-    public float weekDuration = 180f; // Duration of each week in seconds
+    public float weekDuration = 90f; // Duration of each week in seconds
 
     private int minutes;
     private int seconds;
@@ -21,7 +22,7 @@ public class GameManager : MonoBehaviour
 
     public bool pauseTimer;
 
-    public GameObject GameUI;
+    public GameObject GameUI = GameObject.Find("GameUI");
 
     private Label timerLabel;
     private Label weekLabel;
@@ -102,6 +103,22 @@ public class GameManager : MonoBehaviour
             pauseTimer = false; // Reset pause state for the new week
             playedMinigame = false; // Reset minigame state for the new week
             weekLabel.text = $"WEEK {week}"; // Update week display
+        }
+
+        if (week == 4)
+        {
+            if (trust < 30f)
+            {
+                SceneManager.LoadScene(8); // Load bad ending scene
+            }
+            else if (trust >= 30f && trust < 60f)
+            {
+                SceneManager.LoadScene(9); // Load neutral ending scene
+            }
+            else if (trust == 100f)
+            {
+                SceneManager.LoadScene(10); // Load good ending scene
+            }
         }
 
         trustBar.value = trust; // Update trust bar value

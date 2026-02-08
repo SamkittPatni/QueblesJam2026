@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 using UnityEngine;
 using Unity.VisualScripting;
 using UnityEngine.SceneManagement;
+
 ///https://www.youtube.com/watch?v=VqHaDUXJsyg tutorial
 
 public class StackingGameManager : MonoBehaviour
@@ -29,7 +30,7 @@ public class StackingGameManager : MonoBehaviour
 
     private float stackingGameTimeLimit = 45f; /// 10f ~ 13 seconds
 
-    public InputAction InputSystem_Actions;
+    // public InputAction InputSystem_Actions;
 
     public GameObject transparentScreen;
     public GameObject dialoguePanel;
@@ -37,15 +38,15 @@ public class StackingGameManager : MonoBehaviour
     public TMPro.TextMeshProUGUI dialogueText;
 
 
-    private void OnEnable()
-    {
-        InputSystem_Actions.Enable();
-    }
+    // private void OnEnable()
+    // {
+    //     InputSystem_Actions.Enable();
+    // }
 
-    private void OnDisable()
-    {
-        InputSystem_Actions.Disable();
-    }
+    // private void OnDisable()
+    // {
+    //     InputSystem_Actions.Disable();
+    // }
     private IEnumerator DelayedSpawn()
     {
         yield return new WaitForSeconds(timeBetweenRounds);
@@ -67,8 +68,9 @@ public class StackingGameManager : MonoBehaviour
         }
     }
     */
-    private void OnDrop()
+    private void OnSubmit()
 {
+    Debug.Log("Drop action triggered");
     // 1. Only allow the drop if we actually have a block to drop
     if (currentBlock != null && playing)
     {
@@ -190,7 +192,7 @@ public class StackingGameManager : MonoBehaviour
         Debug.Log("You got 20 trust!");
     }
 
-    private void OnMultitap()
+    private void OnCrouch()
     {
         
         if (catScript != null)
