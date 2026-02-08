@@ -686,7 +686,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ec5f858cc88f354fa9ef160780d1ed5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  buttonText: {fileID: 0}
+  buttonText: {fileID: 758964264}
   catScript: {fileID: 2066881325}
   bigScaleMult: 1
 --- !u!114 &894495345
@@ -731,7 +731,7 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: 0
+  m_TextStyleHashCode: -1183493901
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2

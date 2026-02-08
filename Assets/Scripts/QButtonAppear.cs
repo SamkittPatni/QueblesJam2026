@@ -39,17 +39,19 @@ public class QButtonAppear : MonoBehaviour
             {
                 Debug.Log("bruh moment");
                 transform.position = positionOnScreen; // mmoves button icon on screen with cat icon.
+                buttonText.text = "[Q]"; // makes the button text appear when the cat is on screen.
                 while (catScript.CatOnScreen)
                 {
                     transform.localScale = growScale;
                     //buttonText.transform.localScale = originalTextScale * bigScaleMult; /// text go big
                     yield return new WaitForSeconds(0.25f);
 
-                    buttonText.transform.localScale = originalTextScale;
+                    // buttonText.transform.localScale = originalTextScale;
                     transform.localScale = baseScale;
                     yield return new WaitForSeconds(0.25f);
                 }
                 transform.position = positionOffScreen;
+                buttonText.text = ""; // makes the button text disappear when the cat is not on screen.
             }
         }
 
