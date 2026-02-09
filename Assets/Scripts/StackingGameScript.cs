@@ -247,12 +247,12 @@ public void RemoveLastBlock()
         yield return new WaitForSeconds(0.5f); // Wait for the dialogue to appear
         if (success)
         {
-            dialogueText.text = "You completed the maze!";
+            dialogueText.text = "Finally, I can buy some tuna cans!";
             GameManager.Instance.AddTrust(20f); // adds trust to overall trust on win
         }
         else
         {
-            dialogueText.text = "Oh no! You failed the maze!";
+            dialogueText.text = "Aww that sucks! They ran out of tuna cans...";
             GameManager.Instance.AddTrust(-20f); /// lose condition
         }
         yield return new WaitForSeconds(3f); // Display dialogue for 3 seconds

@@ -26,7 +26,7 @@ public class PlayerInteract : MonoBehaviour
             {
                 // Trigger minigame for week 1
                 Debug.Log("Starting minigame for week 1");
-                StartCoroutine(PlayMinigame(dialogueCharacters[1], dialogue: "Minigame for week 1!", sceneNumber: 2));
+                StartCoroutine(PlayMinigame(dialogueCharacters[1], dialogue: "Can you get me some tuna cans?", sceneNumber: 2));
                 GameManager.Instance.SetPlayedMinigame(true); // Mark the minigame as played for the current week
                 return;
             }
@@ -34,7 +34,7 @@ public class PlayerInteract : MonoBehaviour
             {
                 // Trigger minigame for week 2
                 Debug.Log("Starting minigame for week 2");
-                StartCoroutine(PlayMinigame(dialogueCharacters[10], dialogue: "Minigame for week 2!", sceneNumber: 3));
+                StartCoroutine(PlayMinigame(dialogueCharacters[10], dialogue: "Can you ring me up?", sceneNumber: 3));
                 GameManager.Instance.SetPlayedMinigame(true);
                 return;
             }
@@ -42,7 +42,7 @@ public class PlayerInteract : MonoBehaviour
             {
                 // Trigger minigame for week 3
                 Debug.Log("Starting minigame for week 3");
-                StartCoroutine(PlayMinigame(dialogueCharacters[13], dialogue: "Minigame for week 3!", sceneNumber: 4));
+                StartCoroutine(PlayMinigame(dialogueCharacters[13], dialogue: "Can you help me find the milk please?", sceneNumber: 4));
                 GameManager.Instance.SetPlayedMinigame(true);
                 return;
             }
@@ -54,79 +54,104 @@ public class PlayerInteract : MonoBehaviour
             switch (currentNPC)
             {
                 case 1:
+                    if (!GameManager.Instance.NPC1Interacted)
+                    {
+                        GameManager.Instance.NPC1Interacted = true;
+                        GameManager.Instance.AddTrust(5f); // Example: Increase trust by 10 points on first interaction
+                    }
                     // Trigger dialogue for NPC 1
                     if (GameManager.Instance.GetTrust() < 30f)
                     {
-                        StartCoroutine(PlayDialogue(dialogueCharacters[0], dialogue: "Hello, I'm NPC 1. Nice to meet you!"));
+                        StartCoroutine(PlayDialogue(dialogueCharacters[0], dialogue: "Can't you see I'm busy here? Go do your job instead of slacking off."));
                     }
                     else if (GameManager.Instance.GetTrust() >= 30f && GameManager.Instance.GetTrust() < 65f)
                     {
-                        StartCoroutine(PlayDialogue(dialogueCharacters[1], dialogue: "It's good to see you again!"));
+                        StartCoroutine(PlayDialogue(dialogueCharacters[1], dialogue: "Hey I like your hairband! It's certainly a bold choice to wear it to your job. I respect it."));
                     }
                     else if (GameManager.Instance.GetTrust() >= 65f)
                     {
-                        StartCoroutine(PlayDialogue(dialogueCharacters[2], dialogue: "We have already talked twice!"));
+                        StartCoroutine(PlayDialogue(dialogueCharacters[2], dialogue: "Yo what's up! Could you help me choose the best tuna can brand for my cat? I have a FELINE that you would know best… Haha, get it?!"));
                     }
                     break;
                 case 2:
+                    if (!GameManager.Instance.NPC2Interacted)
+                    {
+                        GameManager.Instance.NPC2Interacted = true;
+                        GameManager.Instance.AddTrust(5f); // Example: Increase trust by 10 points on first interaction
+                    }
                     // Trigger dialogue for NPC 2
                     if (GameManager.Instance.GetTrust() < 30f)
                     {
-                        StartCoroutine(PlayDialogue(dialogueCharacters[3], dialogue: "Hi there, I'm NPC 2. Welcome!"));
+                        StartCoroutine(PlayDialogue(dialogueCharacters[3], dialogue: "Should I get a cappucino or an americano? Hmm..."));
                     }
                     else if (GameManager.Instance.GetTrust() >= 30f && GameManager.Instance.GetTrust() < 65f)
                     {
-                        StartCoroutine(PlayDialogue(dialogueCharacters[4], dialogue: "Oh, it's you again!"));
+                        StartCoroutine(PlayDialogue(dialogueCharacters[4], dialogue: "Hey! Is that a cosplay you’re wearing?"));
                     }
                     else if (GameManager.Instance.GetTrust() >= 65f)
                     {
-                        StartCoroutine(PlayDialogue(dialogueCharacters[5], dialogue: "We have already talked twice!"));
+                        StartCoroutine(PlayDialogue(dialogueCharacters[5], dialogue: "That’s a nice cosplay - do you want to go to the next Comic Con with me?"));
                     }
                     break;
                 case 3:
+                    if (!GameManager.Instance.NPC3Interacted)
+                    {
+                        GameManager.Instance.NPC3Interacted = true;
+                        GameManager.Instance.AddTrust(5f); // Example: Increase trust by 10 points on first interaction
+                    }
                     // Trigger dialogue for NPC 3
                     if (GameManager.Instance.GetTrust() < 30f)
                     {
-                        StartCoroutine(PlayDialogue(dialogueCharacters[6], dialogue: "Hey, I'm NPC 3. Nice to meet you!"));
+                        StartCoroutine(PlayDialogue(dialogueCharacters[6], dialogue: "‘Sup. What are you doing here?"));
                     }
                     else if (GameManager.Instance.GetTrust() >= 30f && GameManager.Instance.GetTrust() < 65f)
                     {
-                        StartCoroutine(PlayDialogue(dialogueCharacters[7], dialogue: "It's good to see you again!"));
+                        StartCoroutine(PlayDialogue(dialogueCharacters[7], dialogue: "Honestly, I just like looking at the microwave here."));
                     }
                     else if (GameManager.Instance.GetTrust() >= 65f)
                     {
-                        StartCoroutine(PlayDialogue(dialogueCharacters[8], dialogue: "We have already talked twice!"));
+                        StartCoroutine(PlayDialogue(dialogueCharacters[8], dialogue: "Do you wanna watch the microwave together?"));
                     }
                     break;
                 case 4:
+                    if (!GameManager.Instance.NPC4Interacted)
+                    {
+                        GameManager.Instance.NPC4Interacted = true;
+                        GameManager.Instance.AddTrust(5f); // Example: Increase trust by 10 points on first interaction
+                    }
                     // Trigger dialogue for NPC 4
                     if (GameManager.Instance.GetTrust() < 30f)
                     {
-                        StartCoroutine(PlayDialogue(dialogueCharacters[9], dialogue: "Hello, I'm NPC 4. Nice to meet you!"));
+                        StartCoroutine(PlayDialogue(dialogueCharacters[9], dialogue: "Just one more pull... I’ll win today."));
                     }
                     else if (GameManager.Instance.GetTrust() >= 30f && GameManager.Instance.GetTrust() < 65f)
                     {
-                        StartCoroutine(PlayDialogue(dialogueCharacters[10], dialogue: "It's good to see you again!"));
+                        StartCoroutine(PlayDialogue(dialogueCharacters[10], dialogue: "Hey, you there. Give me some lucky numbers for today’s lottery."));
                     }
                     else if (GameManager.Instance.GetTrust() >= 65f)
                     {
-                        StartCoroutine(PlayDialogue(dialogueCharacters[11], dialogue: "We have already talked twice!"));
+                        StartCoroutine(PlayDialogue(dialogueCharacters[11], dialogue: "If I win big, I promise you’ll get a cut."));
                     }
                     break;
                 case 5:
+                    if (!GameManager.Instance.NPC5Interacted)
+                    {
+                        GameManager.Instance.NPC5Interacted = true;
+                        GameManager.Instance.AddTrust(5f); // Example: Increase trust by 10 points on first interaction
+                    }
                     // Trigger dialogue for NPC 5
                     if (GameManager.Instance.GetTrust() < 30f)
                     {
-                        StartCoroutine(PlayDialogue(dialogueCharacters[12], dialogue: "Hi, I'm NPC 5. Welcome!"));
+                        StartCoroutine(PlayDialogue(dialogueCharacters[12], dialogue: "*Shimmies in the aisle without a care in the world, oblivious to your presence.*"));
                     }
                     else if (GameManager.Instance.GetTrust() >= 30f && GameManager.Instance.GetTrust() < 65f)
                     {
-                        StartCoroutine(PlayDialogue(dialogueCharacters[13], dialogue: "Oh, it's you again!"));
+                        StartCoroutine(PlayDialogue(dialogueCharacters[13], dialogue: "They got greens beans potatoes tomatoes… YOU NAAAAAME IT!!  What should I have for dinner?"));
 
                     }
                     else if (GameManager.Instance.GetTrust() >= 65f)
                     {
-                        StartCoroutine(PlayDialogue(dialogueCharacters[14], dialogue: "We have already talked twice!"));
+                        StartCoroutine(PlayDialogue(dialogueCharacters[14], dialogue: "YOOOO COME WATCH ME DANCE!! :D"));
                     }
                     break;
                 default:

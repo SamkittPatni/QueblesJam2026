@@ -24,6 +24,12 @@ public class GameManager : MonoBehaviour
 
     public GameObject GameUI;
 
+    public bool NPC1Interacted = false;
+    public bool NPC2Interacted = false;
+    public bool NPC3Interacted = false;
+    public bool NPC4Interacted = false;
+    public bool NPC5Interacted = false;
+
     // Include in TODO LIST
     // 1. Task of the day
     // 2. Talk to customers to gain trust
@@ -104,6 +110,12 @@ public class GameManager : MonoBehaviour
             week++;
             pauseTimer = false; // Reset pause state for the new week
             playedMinigame = false; // Reset minigame state for the new week
+
+            NPC1Interacted = false;
+            NPC2Interacted = false;
+            NPC3Interacted = false;
+            NPC4Interacted = false;
+            NPC5Interacted = false;
             
         }
 

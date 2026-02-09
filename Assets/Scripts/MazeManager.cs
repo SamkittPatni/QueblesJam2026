@@ -45,7 +45,7 @@ public class MazeManager : MonoBehaviour
         {
             hasFinished = true;
             timerText.text = "00:00";
-            Debug.Log("Maze failed!");
+            Debug.Log("You found the milk for me! Thanks!");
             StartCoroutine(PlayDialogue(false)); // Play failure dialogue
             // GameManager.Instance.AddTrust(trustPenalty);
         }
@@ -53,7 +53,7 @@ public class MazeManager : MonoBehaviour
         else if (isComplete && !hasFinished)
         {
             hasFinished = true;
-            Debug.Log("Maze completed successfully!");
+            Debug.Log("You couldn’t find the milk? Oh well.");
             StartCoroutine(PlayDialogue(true)); // Play success dialogue
             // GameManager.Instance.AddTrust(trustReward); // Reward trust points to the player
         }
