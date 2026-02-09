@@ -129,6 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 182491508}
   - component: {fileID: 182491507}
+  - component: {fileID: 182491509}
   m_Layer: 0
   m_Name: A_neutral_animated_0
   m_TagString: Untagged
@@ -210,6 +211,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &182491509
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 182491506}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a34476b1fa2f7ad4394bd6fe1296b545, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &206352726
 GameObject:
   m_ObjectHideFlags: 0
@@ -2448,6 +2471,7 @@ GameObject:
   - component: {fileID: 2066881324}
   - component: {fileID: 2066881323}
   - component: {fileID: 2066881325}
+  - component: {fileID: 2066881326}
   m_Layer: 0
   m_Name: Cat_Hungry__0
   m_TagString: Untagged
@@ -2548,6 +2572,28 @@ MonoBehaviour:
   ExitPosition: {x: 7.59, y: -6.55, z: 0}
   CatOnScreen: 0
   gameManager: {fileID: 206352730}
+--- !u!95 &2066881326
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2066881322}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: aa1472e56d425a940b81a5a76be0775b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -30,7 +30,7 @@ public class IntroManager : MonoBehaviour
         yield return new WaitForSeconds(2f); // Wait for 1 second before starting the intro
         dialogueBox.SetActive(true);
         yield return new WaitForSeconds(0.5f); // Wait for the panel to appear
-        dialogueText.text = "Intro 1:  The Mission\nGeneral Meow points at a map of Earth during a meeting. You have been given a mission to invade the planet. To succeed, you must first gain the trust from human.";
+        dialogueText.text = "Intro 1:  The Mission\nGeneral Meow points at a map of Earth during a meeting. You have been given a mission to invade the planet. To succeed, you must first gain the trust from humans.";
         yield return new WaitForSeconds(5f);
         dialogueText.text = "";
         dialogueBox.SetActive(false);
@@ -42,7 +42,7 @@ public class IntroManager : MonoBehaviour
         yield return new WaitForSeconds(3f);
         dialogueBox.SetActive(true);
         yield return new WaitForSeconds(0.5f); // Wait for the panel to appear
-        dialogueText.text = "Intro 2: The Arrival\nYou leave Meow Meow Planet and arrive Earth.";
+        dialogueText.text = "Intro 2: The Arrival\nYou leave Meow Meow Planet and arrive on Earth.";
         yield return new WaitForSeconds(5f);
         dialogueText.text = "";
         dialogueBox.SetActive(false);
@@ -55,8 +55,7 @@ public class IntroManager : MonoBehaviour
         yield return new WaitForSeconds(5f);
         dialogueText.text = "";
         dialogueBox.SetActive(false);
-        GameManager.Instance.SetPauseTimer(false); // Unpause the timer when the intro is over
         SceneManager.LoadScene(1);
-        
+        GameManager.Instance.SetPauseTimer(false);// Unpause the timer when the intro is over
     }
 }

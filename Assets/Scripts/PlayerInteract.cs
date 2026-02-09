@@ -153,7 +153,7 @@ public class PlayerInteract : MonoBehaviour
                     }
                     else if (GameManager.Instance.GetTrust() >= 30f && GameManager.Instance.GetTrust() < 65f)
                     {
-                        StartCoroutine(PlayDialogue(dialogueCharacters[13], dialogue: "They got greens beans potatoes tomatoes… YOU NAAAAAME IT!!  What should I have for dinner?"));
+                        StartCoroutine(PlayDialogue(dialogueCharacters[13], dialogue: "They got greens beans potatoes tomatoes…YOU NAAAAAME IT!! What should I have for dinner?"));
 
                     }
                     else if (GameManager.Instance.GetTrust() >= 65f)

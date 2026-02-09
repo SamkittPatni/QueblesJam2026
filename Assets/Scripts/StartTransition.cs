@@ -18,7 +18,9 @@ public class StartTransition : MonoBehaviour
     public void StartGame()
     {
         // Load the next scene (assuming the next scene is indexed at 1)
+        GameManager.Instance.SetPauseTimer(true);
         UnityEngine.SceneManagement.SceneManager.LoadScene(11);
+        GameManager.Instance.SetPauseTimer(true);
     }
 
     public void QuitGame()
