@@ -76,11 +76,11 @@ public class MazeManager : MonoBehaviour
         yield return new WaitForSeconds(0.5f); // Wait for the dialogue to appear
         if (success)
         {
-            dialogueText.text = "You completed the maze!";
+            dialogueText.text = "You found the milk for me! Thanks!";
         }
         else
         {
-            dialogueText.text = "Oh no! You failed the maze!";
+            dialogueText.text = "You couldn’t find the milk? Oh well.";
         }
         yield return new WaitForSeconds(3f); // Display dialogue for 3 seconds
         FindAnyObjectByType<PlayerInput>().gameObject.SetActive(false);
