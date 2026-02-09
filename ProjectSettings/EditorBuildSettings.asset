@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/OpeningCutsceneScene.unity
-    guid: ddeb5e8ba83717a4bb5cedf4e7c01d40
+    path: Assets/Scenes/StartScene.unity
+    guid: 329d6e1022fe5a145b061ae38486e99b
   - enabled: 1
     path: Assets/Scenes/StoreScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
@@ -38,6 +38,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Ending3Scene.unity
     guid: 3dcd13935be2a7846a783468267d9207
+  - enabled: 1
+    path: Assets/Scenes/OpeningCutsceneScene.unity
+    guid: ddeb5e8ba83717a4bb5cedf4e7c01d40
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 3b36cef144138864bbdc458f22705f1f, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

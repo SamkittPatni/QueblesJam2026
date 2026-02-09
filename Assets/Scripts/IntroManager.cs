@@ -31,7 +31,7 @@ public class IntroManager : MonoBehaviour
         dialogueBox.SetActive(true);
         yield return new WaitForSeconds(0.5f); // Wait for the panel to appear
         dialogueText.text = "Intro 1:  The Mission\nGeneral Meow points at a map of Earth during a meeting. You have been given a mission to invade the planet. To succeed, you must first gain the trust from human.";
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(5f);
         dialogueText.text = "";
         dialogueBox.SetActive(false);
         yield return new WaitForSeconds(1f);
@@ -43,7 +43,7 @@ public class IntroManager : MonoBehaviour
         dialogueBox.SetActive(true);
         yield return new WaitForSeconds(0.5f); // Wait for the panel to appear
         dialogueText.text = "Intro 2: The Arrival\nYou leave Meow Meow Planet and arrive Earth.";
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(5f);
         dialogueText.text = "";
         dialogueBox.SetActive(false);
         yield return new WaitForSeconds(1f);
@@ -52,7 +52,7 @@ public class IntroManager : MonoBehaviour
         dialogueBox.SetActive(true);
         yield return new WaitForSeconds(0.5f); // Wait for the panel to appear
         dialogueText.text = "Intro 3:The Disguise\nYou put on a high-tech hairband and undercover as a trainee at a convenience store to gain trust from people. The only problem? Can you stop yourself from eating the canned tuna?";
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(5f);
         dialogueText.text = "";
         dialogueBox.SetActive(false);
         SceneManager.LoadScene(1);

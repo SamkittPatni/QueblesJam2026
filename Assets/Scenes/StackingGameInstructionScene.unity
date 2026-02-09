@@ -588,11 +588,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: '3.
 
-    Resist the urge to eat!
-
-
-    Tap [Q] repeatedly to curb your
-    hunger, or else you might eat the tuna cans...'
+    Beware of your hunger!! You might eat the tuna cans...'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 329aeb4fce6d2774f8ea591f0b8a3d29, type: 2}
   m_sharedMaterial: {fileID: -3115461547832226023, guid: 329aeb4fce6d2774f8ea591f0b8a3d29, type: 2}
@@ -1704,7 +1700,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "1. \nPress [SPACE] to drop tuna cans\n\nStack at least 5 tuna cans to
+  m_text: "1. \nPress [Enter] to drop tuna cans\n\nStack at least 5 tuna cans to
     gain trust!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 329aeb4fce6d2774f8ea591f0b8a3d29, type: 2}
