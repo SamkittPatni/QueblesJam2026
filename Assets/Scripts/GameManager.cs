@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance; // Singleton instance
-    public int week = 1;
-    public float trust = 0f;
+    public static int week = 1;
+    public static float trust = 0f;
 
     public float startTime;
 
@@ -18,15 +18,11 @@ public class GameManager : MonoBehaviour
 
     public string timeText;
 
-    public bool playedMinigame = false;
+    public static bool playedMinigame = false;
 
-    public bool pauseTimer;
+    public static bool pauseTimer;
 
-    public GameObject GameUI = GameObject.Find("GameUI");
-
-    private Label timerLabel;
-    private Label weekLabel;
-    private ProgressBar trustBar;
+    public GameObject GameUI;
 
     // Include in TODO LIST
     // 1. Task of the day
@@ -34,13 +30,18 @@ public class GameManager : MonoBehaviour
     
     private void Awake()
     {
-        if (Instance != null)
+        if (Instance == null)
         {
+            // This is the very first GameManager. Keep it!
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            // A GameManager already exists from a previous scene. 
+            // Destroy this new one so we don't have duplicates.
             Destroy(gameObject);
         }
-
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
 
         // Every time the scene loads, increment the week counter
         // week++;
@@ -50,15 +51,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         // Get UIDocument on this game object
-        UIDocument uiDocument = GameUI.GetComponent<UIDocument>();
-
-        // Get the root of the visual tree
-        VisualElement root = uiDocument.rootVisualElement;
-
-        // Find element by name
-        timerLabel = root.Q<Label>("TimerDisplay");
-        weekLabel = root.Q<Label>("WeekDayDisplay");
-        trustBar = root.Q<ProgressBar>("TrustBar");
+        
 
         
 
@@ -71,11 +64,11 @@ public class GameManager : MonoBehaviour
         // }
         
         // Display week day
-        weekLabel.text = $"WEEK {week}";
+        // weekLabel.text = $"WEEK {week}";
 
         // Assign trust value to progress bar
         // TODO: change assigning value to {trust} variable
-        trustBar.value = 20f;
+        // trustBar.value = 20f;
 
         // StartCoroutine(EndWeek());
     }
@@ -83,6 +76,16 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // GameUI = GameObject.Find("GameUI");
+        // UIDocument uiDocument = GameUI.GetComponent<UIDocument>();
+
+        // // Get the root of the visual tree
+        // VisualElement root = uiDocument.rootVisualElement;
+
+        // // Find element by name
+        // timerLabel = root.Q<Label>("TimerDisplay");
+        // weekLabel = root.Q<Label>("WeekDayDisplay");
+        // trustBar = root.Q<ProgressBar>("TrustBar");
         if (!pauseTimer)
         {
             startTime += Time.deltaTime;
@@ -91,7 +94,6 @@ public class GameManager : MonoBehaviour
             timeText = string.Format("{0:0}:{1:00}", minutes, seconds);
 
             // Display timeText inside the TimerDisplay
-            timerLabel.text = timeText;
 
             
         }
@@ -102,7 +104,7 @@ public class GameManager : MonoBehaviour
             week++;
             pauseTimer = false; // Reset pause state for the new week
             playedMinigame = false; // Reset minigame state for the new week
-            weekLabel.text = $"WEEK {week}"; // Update week display
+            
         }
 
         if (week == 4)
@@ -121,7 +123,7 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        trustBar.value = trust; // Update trust bar value
+        
         Debug.Log("Week: " + week + " Time: " + minutes + ":" + seconds);
     }
 
@@ -136,5 +138,30 @@ public class GameManager : MonoBehaviour
         {
             trust = 100f; // Ensure trust doesn't exceed 100
         }
+    }
+
+    public float GetTrust()
+    {
+        return trust;
+    }
+
+    public int GetWeek()
+    {
+        return week;
+    }
+
+    public bool HasPlayedMinigame()
+    {
+        return playedMinigame;
+    }
+
+    public void SetPlayedMinigame(bool value)
+    {
+        playedMinigame = value;
+    }
+
+    public void SetPauseTimer(bool value)
+    {
+        pauseTimer = value;
     }
 }

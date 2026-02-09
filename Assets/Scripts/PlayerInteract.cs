@@ -18,30 +18,32 @@ public class PlayerInteract : MonoBehaviour
 
     private void OnInteract()
     {
-        if (!GameManager.Instance.playedMinigame && currentNPC != -1)
+        Debug.Log("Current Week: " + GameManager.Instance.GetWeek());
+        Debug.Log(GameManager.Instance.HasPlayedMinigame());
+        if (!GameManager.Instance.HasPlayedMinigame() && currentNPC != -1)
         {
-            if (GameManager.Instance.week == 1 && currentNPC == 1)
+            if (GameManager.Instance.GetWeek() == 1 && currentNPC == 1)
             {
                 // Trigger minigame for week 1
                 Debug.Log("Starting minigame for week 1");
                 StartCoroutine(PlayMinigame(dialogueCharacters[1], dialogue: "Minigame for week 1!", sceneNumber: 2));
-                GameManager.Instance.playedMinigame = true;
+                GameManager.Instance.SetPlayedMinigame(true); // Mark the minigame as played for the current week
                 return;
             }
-            else if (GameManager.Instance.week == 2 && currentNPC == 4)
+            else if (GameManager.Instance.GetWeek() == 2 && currentNPC == 4)
             {
                 // Trigger minigame for week 2
                 Debug.Log("Starting minigame for week 2");
                 StartCoroutine(PlayMinigame(dialogueCharacters[10], dialogue: "Minigame for week 2!", sceneNumber: 3));
-                GameManager.Instance.playedMinigame = true;
+                GameManager.Instance.SetPlayedMinigame(true);
                 return;
             }
-            else if (GameManager.Instance.week == 3 && currentNPC == 5)
+            else if (GameManager.Instance.GetWeek() == 3 && currentNPC == 5)
             {
                 // Trigger minigame for week 3
                 Debug.Log("Starting minigame for week 3");
                 StartCoroutine(PlayMinigame(dialogueCharacters[13], dialogue: "Minigame for week 3!", sceneNumber: 4));
-                GameManager.Instance.playedMinigame = true;
+                GameManager.Instance.SetPlayedMinigame(true);
                 return;
             }
         }
@@ -53,76 +55,76 @@ public class PlayerInteract : MonoBehaviour
             {
                 case 1:
                     // Trigger dialogue for NPC 1
-                    if (GameManager.Instance.trust < 30f)
+                    if (GameManager.Instance.GetTrust() < 30f)
                     {
                         StartCoroutine(PlayDialogue(dialogueCharacters[0], dialogue: "Hello, I'm NPC 1. Nice to meet you!"));
                     }
-                    else if (GameManager.Instance.trust >= 30f && GameManager.Instance.trust < 65f)
+                    else if (GameManager.Instance.GetTrust() >= 30f && GameManager.Instance.GetTrust() < 65f)
                     {
                         StartCoroutine(PlayDialogue(dialogueCharacters[1], dialogue: "It's good to see you again!"));
                     }
-                    else if (GameManager.Instance.trust >= 65f)
+                    else if (GameManager.Instance.GetTrust() >= 65f)
                     {
                         StartCoroutine(PlayDialogue(dialogueCharacters[2], dialogue: "We have already talked twice!"));
                     }
                     break;
                 case 2:
                     // Trigger dialogue for NPC 2
-                    if (GameManager.Instance.trust < 30f)
+                    if (GameManager.Instance.GetTrust() < 30f)
                     {
                         StartCoroutine(PlayDialogue(dialogueCharacters[3], dialogue: "Hi there, I'm NPC 2. Welcome!"));
                     }
-                    else if (GameManager.Instance.trust >= 30f && GameManager.Instance.trust < 65f)
+                    else if (GameManager.Instance.GetTrust() >= 30f && GameManager.Instance.GetTrust() < 65f)
                     {
                         StartCoroutine(PlayDialogue(dialogueCharacters[4], dialogue: "Oh, it's you again!"));
                     }
-                    else if (GameManager.Instance.trust >= 65f)
+                    else if (GameManager.Instance.GetTrust() >= 65f)
                     {
                         StartCoroutine(PlayDialogue(dialogueCharacters[5], dialogue: "We have already talked twice!"));
                     }
                     break;
                 case 3:
                     // Trigger dialogue for NPC 3
-                    if (GameManager.Instance.trust < 30f)
+                    if (GameManager.Instance.GetTrust() < 30f)
                     {
                         StartCoroutine(PlayDialogue(dialogueCharacters[6], dialogue: "Hey, I'm NPC 3. Nice to meet you!"));
                     }
-                    else if (GameManager.Instance.trust >= 30f && GameManager.Instance.trust < 65f)
+                    else if (GameManager.Instance.GetTrust() >= 30f && GameManager.Instance.GetTrust() < 65f)
                     {
                         StartCoroutine(PlayDialogue(dialogueCharacters[7], dialogue: "It's good to see you again!"));
                     }
-                    else if (GameManager.Instance.trust >= 65f)
+                    else if (GameManager.Instance.GetTrust() >= 65f)
                     {
                         StartCoroutine(PlayDialogue(dialogueCharacters[8], dialogue: "We have already talked twice!"));
                     }
                     break;
                 case 4:
                     // Trigger dialogue for NPC 4
-                    if (GameManager.Instance.trust < 30f)
+                    if (GameManager.Instance.GetTrust() < 30f)
                     {
                         StartCoroutine(PlayDialogue(dialogueCharacters[9], dialogue: "Hello, I'm NPC 4. Nice to meet you!"));
                     }
-                    else if (GameManager.Instance.trust >= 30f && GameManager.Instance.trust < 65f)
+                    else if (GameManager.Instance.GetTrust() >= 30f && GameManager.Instance.GetTrust() < 65f)
                     {
                         StartCoroutine(PlayDialogue(dialogueCharacters[10], dialogue: "It's good to see you again!"));
                     }
-                    else if (GameManager.Instance.trust >= 65f)
+                    else if (GameManager.Instance.GetTrust() >= 65f)
                     {
                         StartCoroutine(PlayDialogue(dialogueCharacters[11], dialogue: "We have already talked twice!"));
                     }
                     break;
                 case 5:
                     // Trigger dialogue for NPC 5
-                    if (GameManager.Instance.trust < 30f)
+                    if (GameManager.Instance.GetTrust() < 30f)
                     {
                         StartCoroutine(PlayDialogue(dialogueCharacters[12], dialogue: "Hi, I'm NPC 5. Welcome!"));
                     }
-                    else if (GameManager.Instance.trust >= 30f && GameManager.Instance.trust < 65f)
+                    else if (GameManager.Instance.GetTrust() >= 30f && GameManager.Instance.GetTrust() < 65f)
                     {
                         StartCoroutine(PlayDialogue(dialogueCharacters[13], dialogue: "Oh, it's you again!"));
 
                     }
-                    else if (GameManager.Instance.trust >= 65f)
+                    else if (GameManager.Instance.GetTrust() >= 65f)
                     {
                         StartCoroutine(PlayDialogue(dialogueCharacters[14], dialogue: "We have already talked twice!"));
                     }
@@ -185,7 +187,7 @@ public class PlayerInteract : MonoBehaviour
 
     IEnumerator PlayMinigame(GameObject dialogueCharacter, string dialogue, int sceneNumber)
     {
-        GameManager.Instance.pauseTimer = true; // Pause the week timer when starting the minigame
+        GameManager.Instance.SetPauseTimer(true); // Pause the week timer when starting the minigame
         transparentScreen.SetActive(true);
         dialogueCharacter.SetActive(true);
         yield return new WaitForSeconds(0.5f); // Wait for the panel to appear

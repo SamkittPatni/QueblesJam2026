@@ -14,7 +14,7 @@ public class NPCManagement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Debug.Log("Week: " + GameManager.Instance.week);
+        Debug.Log("Week: " + GameManager.Instance.GetWeek());
         for (int i = 0; i < NPCs.Length; i++)
         {
             Instantiate(NPCs[i], NPCositions[i], Quaternion.identity);

@@ -21,6 +21,7 @@ public class MazeManager : MonoBehaviour
     public GameObject dialoguePanel; // Reference to a UI panel for dialogue
     public GameObject dialogueCharacter; // Reference to a UI element for the character portrait in dialogue
     public GameObject transparentScreen;
+    private bool hasFinished = false; // Flag to ensure dialogue is only played once
     void Start()
     {
         startTime = 0f;
@@ -40,16 +41,18 @@ public class MazeManager : MonoBehaviour
         // timerText.text = Mathf.FloorToInt(mazeTimeLimit - startTime)/60 + ":" + Mathf.FloorToInt(mazeTimeLimit - startTime)%60;
         // Debug.Log("Time: " + Mathf.FloorToInt(startTime) + " seconds");
         // Check if the time limit has been reached and the maze is not completed
-        if (startTime >= mazeTimeLimit && !isComplete)
+        if (startTime >= mazeTimeLimit && !isComplete && !hasFinished)
         {
+            hasFinished = true;
             timerText.text = "00:00";
             Debug.Log("Maze failed!");
             StartCoroutine(PlayDialogue(false)); // Play failure dialogue
             // GameManager.Instance.AddTrust(trustPenalty);
         }
         // Check if the maze is completed successfully within the time limit
-        else if (isComplete)
+        else if (isComplete && !hasFinished)
         {
+            hasFinished = true;
             Debug.Log("Maze completed successfully!");
             StartCoroutine(PlayDialogue(true)); // Play success dialogue
             // GameManager.Instance.AddTrust(trustReward); // Reward trust points to the player
@@ -81,7 +84,7 @@ public class MazeManager : MonoBehaviour
         }
         yield return new WaitForSeconds(3f); // Display dialogue for 3 seconds
         FindAnyObjectByType<PlayerInput>().gameObject.SetActive(false);
-        GameManager.Instance.pauseTimer = false; // Unpause the week timer after the maze minigame ends
+        GameManager.Instance.SetPauseTimer(false); // Unpause the week timer after the maze minigame ends
         SceneManager.LoadScene(1); // Load the main scene after failure
     }
 

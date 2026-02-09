@@ -3784,13 +3784,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a3be44b158c8ff419e610e57fd2f028, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  week: 1
-  trust: 0
   startTime: 0
   weekDuration: 90
   timeText: 
-  playedMinigame: 0
-  pauseTimer: 0
   GameUI: {fileID: 1777657405}
 --- !u!4 &1469546226
 Transform:
@@ -4182,6 +4178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1777657407}
   - component: {fileID: 1777657406}
+  - component: {fileID: 1777657408}
   m_Layer: 0
   m_Name: GameUI
   m_TagString: Untagged
@@ -4227,6 +4224,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1777657408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777657405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62a1b7d033df1ba48b3d827be3768e74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIUpdate
 --- !u!4 &1784314914 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3600758031880938539, guid: 5015f09798c6fb14585675b1c604e9b1, type: 3}

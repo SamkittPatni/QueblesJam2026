@@ -119,11 +119,11 @@ public class CashierMiniGameInput : MonoBehaviour
             if (score > 0)
             {
                 success = true;
-                //GameManger.Instance.AddTrust(20f);
+                GameManager.Instance.AddTrust(20f);
             }
             else
             {
-                //GameManger.Instance.AddTrust(-20f);
+                GameManager.Instance.AddTrust(-20f);
                 success = false;
             }
 
@@ -155,7 +155,7 @@ public class CashierMiniGameInput : MonoBehaviour
             dialogueText.text = "I think you shorted me....are you a cat?";
         }
         yield return new WaitForSeconds(3f); // Display dialogue for 3 seconds
-        GameManager.Instance.pauseTimer = false; // Unpause the week timer after the maze minigame ends
+        GameManager.Instance.SetPauseTimer(false); // Unpause the week timer after the maze minigame ends
         SceneManager.LoadScene(1);
     }
 }

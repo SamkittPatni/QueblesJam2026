@@ -106,6 +106,8 @@ public class StackingGameManager : MonoBehaviour
 
     private bool success = false;
 
+    private bool hasFinished = false;
+
 
     void Start()
     {
@@ -146,7 +148,6 @@ public class StackingGameManager : MonoBehaviour
         {
             playing = false;
             Debug.Log("You ran out of time!");
-            GameManager.Instance.AddTrust(-30f); /// lose condition
 
         }
 
@@ -167,8 +168,9 @@ public class StackingGameManager : MonoBehaviour
         /// temporarily assign a key to restart the game
         /// note - no code here as we do not need to add a button to exit the game.
         
-        if (!playing)
+        if (!playing && !hasFinished)
         {
+            hasFinished = true;
             StartCoroutine(PlayDialogue(success));
         }
     }
@@ -180,7 +182,6 @@ public class StackingGameManager : MonoBehaviour
         if (livesRemaining == 0)
         {
             playing = false;
-            GameManager.Instance.AddTrust(-20f); /// lose condition
         }
     }
     public void WinGame()
@@ -188,7 +189,6 @@ public class StackingGameManager : MonoBehaviour
     {/// win condition
         success = true;
         playing = false;
-        GameManager.Instance.AddTrust(20f); // adds trust to overall trust on win
         Debug.Log("You got 20 trust!");
     }
 
@@ -248,14 +248,16 @@ public void RemoveLastBlock()
         if (success)
         {
             dialogueText.text = "You completed the maze!";
+            GameManager.Instance.AddTrust(20f); // adds trust to overall trust on win
         }
         else
         {
             dialogueText.text = "Oh no! You failed the maze!";
+            GameManager.Instance.AddTrust(-20f); /// lose condition
         }
         yield return new WaitForSeconds(3f); // Display dialogue for 3 seconds
         FindAnyObjectByType<PlayerInput>().gameObject.SetActive(false);
-        GameManager.Instance.pauseTimer = false; // Unpause the week timer after the maze minigame ends
+        GameManager.Instance.SetPauseTimer(false); // Unpause the week timer after the maze minigame ends
         SceneManager.LoadScene(1); // Load the main scene after failure
     }
 }
