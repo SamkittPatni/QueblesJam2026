@@ -23,30 +23,34 @@ public class NPCManagement : MonoBehaviour
         {
             Instantiate(NPCs[i], NPCositions[i], Quaternion.identity);
         }
-
-        switch (GameManager.Instance.GetWeek())
-        {
-            case 1:
-                // Initialize NPCs for week 1
-                NPC1Exclamation.SetActive(true);
-                break;
-            case 2:
-                // Initialize NPCs for week 2
-                NPC4Exclamation.SetActive(true);
-                break;
-            case 3:
-                // Initialize NPCs for week 3
-                NPC5Exclamation.SetActive(true);
-                break;
-            default:
-                // Initialize NPCs for other weeks or default state
-                break;
-        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        switch (GameManager.Instance.GetWeek())
+        {
+            case 1:
+                // Initialize NPCs for week 1
+                NPC1Exclamation.SetActive(true);
+                NPC4Exclamation.SetActive(false);
+                NPC5Exclamation.SetActive(false);
+                break;
+            case 2:
+                // Initialize NPCs for week 2
+                NPC4Exclamation.SetActive(true);
+                NPC1Exclamation.SetActive(false);
+                NPC5Exclamation.SetActive(false);
+                break;
+            case 3:
+                // Initialize NPCs for week 3
+                NPC5Exclamation.SetActive(true);
+                NPC1Exclamation.SetActive(false);
+                NPC4Exclamation.SetActive(false);
+                break;
+            default:
+                // Initialize NPCs for other weeks or default state
+                break;
+        }
     }
 }
