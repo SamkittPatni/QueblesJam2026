@@ -28,7 +28,16 @@ public class NPCManagement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        switch (GameManager.Instance.GetWeek())
+        if (GameManager.Instance.HasPlayedMinigame())
+        {
+            // If the minigame has been played, hide all exclamation marks
+            NPC1Exclamation.SetActive(false);
+            NPC4Exclamation.SetActive(false);
+            NPC5Exclamation.SetActive(false);
+        }
+        else
+        {
+            switch (GameManager.Instance.GetWeek())
         {
             case 1:
                 // Initialize NPCs for week 1
@@ -51,6 +60,8 @@ public class NPCManagement : MonoBehaviour
             default:
                 // Initialize NPCs for other weeks or default state
                 break;
+        }
+
         }
     }
 }

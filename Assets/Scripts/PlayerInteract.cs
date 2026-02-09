@@ -16,6 +16,10 @@ public class PlayerInteract : MonoBehaviour
     public GameObject interactBackground;
     public TMP_Text interactText;
 
+    public GameObject NPC1Exclamation;
+    public GameObject NPC4Exclamation;
+    public GameObject NPC5Exclamation;
+
     private void OnInteract()
     {
         Debug.Log("Current Week: " + GameManager.Instance.GetWeek());
@@ -26,6 +30,7 @@ public class PlayerInteract : MonoBehaviour
             {
                 // Trigger minigame for week 1
                 Debug.Log("Starting minigame for week 1");
+                NPC1Exclamation.SetActive(false); // Hide exclamation mark after starting minigame
                 StartCoroutine(PlayMinigame(dialogueCharacters[1], dialogue: "Can you get me some tuna cans?", sceneNumber: 2));
                 GameManager.Instance.SetPlayedMinigame(true); // Mark the minigame as played for the current week
                 return;
@@ -34,6 +39,7 @@ public class PlayerInteract : MonoBehaviour
             {
                 // Trigger minigame for week 2
                 Debug.Log("Starting minigame for week 2");
+                NPC4Exclamation.SetActive(false); // Hide exclamation mark after starting minigame
                 StartCoroutine(PlayMinigame(dialogueCharacters[10], dialogue: "Can you ring me up?", sceneNumber: 3));
                 GameManager.Instance.SetPlayedMinigame(true);
                 return;
@@ -42,6 +48,7 @@ public class PlayerInteract : MonoBehaviour
             {
                 // Trigger minigame for week 3
                 Debug.Log("Starting minigame for week 3");
+                NPC5Exclamation.SetActive(false); // Hide exclamation mark after starting minigame
                 StartCoroutine(PlayMinigame(dialogueCharacters[13], dialogue: "Can you help me find the milk please?", sceneNumber: 4));
                 GameManager.Instance.SetPlayedMinigame(true);
                 return;

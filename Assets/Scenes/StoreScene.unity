@@ -3970,7 +3970,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   startTime: 0
-  weekDuration: 10
+  weekDuration: 90
   timeText: 
   GameUI: {fileID: 1777657405}
   NPC1Interacted: 0
@@ -5824,6 +5824,18 @@ PrefabInstance:
       propertyPath: interactText
       value: 
       objectReference: {fileID: 614024963}
+    - target: {fileID: 5450780274728686323, guid: 1bfd581036ca6d043842fe2dde3bb589, type: 3}
+      propertyPath: NPC1Exclamation
+      value: 
+      objectReference: {fileID: 1751194058}
+    - target: {fileID: 5450780274728686323, guid: 1bfd581036ca6d043842fe2dde3bb589, type: 3}
+      propertyPath: NPC4Exclamation
+      value: 
+      objectReference: {fileID: 822479376}
+    - target: {fileID: 5450780274728686323, guid: 1bfd581036ca6d043842fe2dde3bb589, type: 3}
+      propertyPath: NPC5Exclamation
+      value: 
+      objectReference: {fileID: 692996081}
     - target: {fileID: 5450780274728686323, guid: 1bfd581036ca6d043842fe2dde3bb589, type: 3}
       propertyPath: transparentScreen
       value: 
