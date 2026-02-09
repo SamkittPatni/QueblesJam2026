@@ -19,4 +19,16 @@ public class StartTransition : MonoBehaviour
         // Load the next scene (assuming the next scene is indexed at 1)
         UnityEngine.SceneManagement.SceneManager.LoadScene(11);
     }
+
+    public void QuitGame()
+    {
+        // Quit the application
+        Application.Quit();
+    }
+
+    public void ReturnToMainMenu()
+    {
+        // Load the main menu scene (assuming it's indexed at 0)
+        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+    }
 }
