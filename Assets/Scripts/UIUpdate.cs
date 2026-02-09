@@ -6,6 +6,9 @@ public class UIUpdate : MonoBehaviour
     private Label timerLabel;
     private Label weekLabel;
     private ProgressBar trustBar;
+
+    private Label tunaCountLabel;
+    private Label todoListLabel;
     void Start()
     {
         UIDocument uiDocument = GetComponent<UIDocument>();
@@ -17,6 +20,9 @@ public class UIUpdate : MonoBehaviour
         timerLabel = root.Q<Label>("TimerDisplay");
         weekLabel = root.Q<Label>("WeekDayDisplay");
         trustBar = root.Q<ProgressBar>("TrustBar");
+        tunaCountLabel = root.Q<Label>("TunaCounterNumber");
+        todoListLabel = root.Q<Label>("ToDoLis");
+        
 
         weekLabel.text = $"WEEK {GameManager.Instance.GetWeek()}"; // Set initial week display
 
@@ -31,5 +37,21 @@ public class UIUpdate : MonoBehaviour
         timerLabel.text = GameManager.Instance.timeText;
         weekLabel.text = $"WEEK {GameManager.Instance.GetWeek()}"; // Update week display
         trustBar.value = GameManager.Instance.GetTrust(); // Update trust bar value
+        tunaCountLabel.text = $"x{GameManager.Instance.GetTunaCount()}"; // Update tuna count display
+        switch (GameManager.Instance.GetWeek())
+        {
+            case 1:
+                todoListLabel.text = "-Stack shelf\n-Talk to customers\n-Collect tuna";
+                break;
+            case 2:
+                todoListLabel.text = "-Man the register\n-Talk to customers\n-Collect tuna";
+                break;
+            case 3:
+                todoListLabel.text = "-Direct customers\n-Talk to customers\n-Collect tuna";
+                break;
+            default:
+                todoListLabel.text = "-Talk to customers\n-Collect tuna";
+                break;
+        }
     }
 }

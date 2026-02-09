@@ -17,6 +17,7 @@ public class SkipCutscene : MonoBehaviour
     public void SkipScene()
     {
         // Load the next scene (assuming the next scene is indexed at 1)
+        GameManager.Instance.SetPauseTimer(false); // Unpause the timer when skipping the cutscene
         UnityEngine.SceneManagement.SceneManager.LoadScene(1);
     }
 }

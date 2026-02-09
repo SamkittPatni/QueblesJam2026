@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour
     public bool NPC4Interacted = false;
     public bool NPC5Interacted = false;
 
+    public int tunaCollected = 0;
+
     // Include in TODO LIST
     // 1. Task of the day
     // 2. Talk to customers to gain trust
@@ -126,18 +128,19 @@ public class GameManager : MonoBehaviour
 
         if (week == 4)
         {
-            if (trust < 30f)
-            {
-                SceneManager.LoadScene(8); // Load bad ending scene
-            }
-            else if (trust >= 30f && trust < 60f)
-            {
-                SceneManager.LoadScene(9); // Load neutral ending scene
-            }
-            else if (trust == 100f)
-            {
-                SceneManager.LoadScene(10); // Load good ending scene
-            }
+            // if (trust < 30f)
+            // {
+            //     SceneManager.LoadScene(8); // Load bad ending scene
+            // }
+            // else if (trust >= 30f && trust < 60f)
+            // {
+            //     SceneManager.LoadScene(9); // Load neutral ending scene
+            // }
+            // else if (trust == 100f)
+            // {
+            //     SceneManager.LoadScene(10); // Load good ending scene
+            // }
+            LoadEndingScene();
         }
 
         
@@ -180,5 +183,33 @@ public class GameManager : MonoBehaviour
     public void SetPauseTimer(bool value)
     {
         pauseTimer = value;
+    }
+
+    public void CollectTuna()
+    {
+        tunaCollected++;
+    }
+
+    public int GetTunaCount()
+    {
+        return tunaCollected;
+    }
+
+    private void LoadEndingScene()
+    {
+        pauseTimer = true; // Pause the timer during the ending scene transition
+        week = 1; // Reset week for potential replayability
+        if (trust < 30f)
+        {
+            SceneManager.LoadScene(8); // Load bad ending scene
+        }
+        else if (trust >= 30f && trust < 60f)
+        {
+            SceneManager.LoadScene(9); // Load neutral ending scene
+        }
+        else if (trust == 100f)
+        {
+            SceneManager.LoadScene(10); // Load good ending scene
+        }
     }
 }

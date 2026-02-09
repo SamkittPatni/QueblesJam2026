@@ -55,6 +55,7 @@ public class IntroManager : MonoBehaviour
         yield return new WaitForSeconds(5f);
         dialogueText.text = "";
         dialogueBox.SetActive(false);
+        GameManager.Instance.SetPauseTimer(false); // Unpause the timer when the intro is over
         SceneManager.LoadScene(1);
         
     }

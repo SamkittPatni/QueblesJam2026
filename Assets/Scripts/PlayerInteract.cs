@@ -77,7 +77,7 @@ public class PlayerInteract : MonoBehaviour
                     }
                     else if (GameManager.Instance.GetTrust() >= 65f)
                     {
-                        StartCoroutine(PlayDialogue(dialogueCharacters[2], dialogue: "Yo what's up! Could you help me choose the best tuna can brand for my cat? I have a FELINE that you would know best… Haha, get it?!"));
+                        StartCoroutine(PlayDialogue(dialogueCharacters[2], dialogue: "Do you want to choose tuna cans with me for my cat? I have a FELINE that you'd know best!"));
                     }
                     break;
                 case 2:

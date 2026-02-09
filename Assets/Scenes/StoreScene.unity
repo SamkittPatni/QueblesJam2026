@@ -3970,7 +3970,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   startTime: 0
-  weekDuration: 10
+  weekDuration: 60
   timeText: 
   GameUI: {fileID: 1777657405}
   NPC1Interacted: 0
@@ -3978,6 +3978,7 @@ MonoBehaviour:
   NPC3Interacted: 0
   NPC4Interacted: 0
   NPC5Interacted: 0
+  tunaCollected: 0
 --- !u!4 &1469546226
 Transform:
   m_ObjectHideFlags: 0
