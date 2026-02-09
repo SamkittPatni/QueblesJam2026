@@ -10,7 +10,7 @@ public class WeekTransitionManager : MonoBehaviour
     void Start()
     {
         weekText.text = "Week " + GameManager.Instance.GetWeek();
-        StartCoroutine(TransitionToNextWeek());
+        // StartCoroutine(TransitionToNextWeek());
     }
 
     // Update is called once per frame
@@ -19,13 +19,10 @@ public class WeekTransitionManager : MonoBehaviour
         
     }
 
-    private IEnumerator TransitionToNextWeek()
+    public void TransitionToNextWeekButton()
     {
-        // Wait for 3 seconds before transitioning to the next week
-        yield return new WaitForSeconds(3f);
         GameManager.Instance.SetPauseTimer(false); // Unpause the timer when transitioning to the next week
-        // Load the next scene (assuming the next scene is indexed at 1)
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(1); // Load the next scene (assuming the next scene is indexed at 1)
     }
 }
 
