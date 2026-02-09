@@ -11,6 +11,10 @@ public class NPCManagement : MonoBehaviour
         new Vector3(13.54f, -0.13f, 0),
         new Vector3(-10.28f, -3.96f, 0)
     };
+
+    public GameObject NPC1Exclamation;
+    public GameObject NPC4Exclamation;
+    public GameObject NPC5Exclamation;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,24 +23,25 @@ public class NPCManagement : MonoBehaviour
         {
             Instantiate(NPCs[i], NPCositions[i], Quaternion.identity);
         }
-        // switch (GameManager.Instance.week)
-        // {
-        //     case 1:
-        //         // Initialize NPCs for week 1
-        //         break;
-        //     case 2:
-        //         // Initialize NPCs for week 2
-        //         break;
-        //     case 3:
-        //         // Initialize NPCs for week 3
-        //         break;
-        //     case 4:
-        //         // Initialize NPCs for week 4
-        //         break;
-        //     default:
-        //         // Initialize NPCs for other weeks or default state
-        //         break;
-        // }
+
+        switch (GameManager.Instance.GetWeek())
+        {
+            case 1:
+                // Initialize NPCs for week 1
+                NPC1Exclamation.SetActive(true);
+                break;
+            case 2:
+                // Initialize NPCs for week 2
+                NPC4Exclamation.SetActive(true);
+                break;
+            case 3:
+                // Initialize NPCs for week 3
+                NPC5Exclamation.SetActive(true);
+                break;
+            default:
+                // Initialize NPCs for other weeks or default state
+                break;
+        }
     }
 
     // Update is called once per frame

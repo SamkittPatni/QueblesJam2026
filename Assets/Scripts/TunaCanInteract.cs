@@ -18,7 +18,7 @@ public class TunaCanInteract : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            GameManager.Instance.AddTrust(1f);
+            GameManager.Instance.AddTrust(0.5f);
             Destroy(gameObject); // Destroy the tuna can after interaction
             // Here you would trigger the dialogue or interaction logic for the tuna can
         }

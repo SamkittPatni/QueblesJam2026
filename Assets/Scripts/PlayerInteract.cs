@@ -57,7 +57,7 @@ public class PlayerInteract : MonoBehaviour
                     if (!GameManager.Instance.NPC1Interacted)
                     {
                         GameManager.Instance.NPC1Interacted = true;
-                        GameManager.Instance.AddTrust(5f); // Example: Increase trust by 10 points on first interaction
+                        GameManager.Instance.AddTrust(2f); // Example: Increase trust by 10 points on first interaction
                     }
                     // Trigger dialogue for NPC 1
                     if (GameManager.Instance.GetTrust() < 30f)
@@ -77,7 +77,7 @@ public class PlayerInteract : MonoBehaviour
                     if (!GameManager.Instance.NPC2Interacted)
                     {
                         GameManager.Instance.NPC2Interacted = true;
-                        GameManager.Instance.AddTrust(5f); // Example: Increase trust by 10 points on first interaction
+                        GameManager.Instance.AddTrust(2f); // Example: Increase trust by 10 points on first interaction
                     }
                     // Trigger dialogue for NPC 2
                     if (GameManager.Instance.GetTrust() < 30f)
@@ -97,7 +97,7 @@ public class PlayerInteract : MonoBehaviour
                     if (!GameManager.Instance.NPC3Interacted)
                     {
                         GameManager.Instance.NPC3Interacted = true;
-                        GameManager.Instance.AddTrust(5f); // Example: Increase trust by 10 points on first interaction
+                        GameManager.Instance.AddTrust(2f); // Example: Increase trust by 10 points on first interaction
                     }
                     // Trigger dialogue for NPC 3
                     if (GameManager.Instance.GetTrust() < 30f)
@@ -117,7 +117,7 @@ public class PlayerInteract : MonoBehaviour
                     if (!GameManager.Instance.NPC4Interacted)
                     {
                         GameManager.Instance.NPC4Interacted = true;
-                        GameManager.Instance.AddTrust(5f); // Example: Increase trust by 10 points on first interaction
+                        GameManager.Instance.AddTrust(2f); // Example: Increase trust by 10 points on first interaction
                     }
                     // Trigger dialogue for NPC 4
                     if (GameManager.Instance.GetTrust() < 30f)
@@ -137,7 +137,7 @@ public class PlayerInteract : MonoBehaviour
                     if (!GameManager.Instance.NPC5Interacted)
                     {
                         GameManager.Instance.NPC5Interacted = true;
-                        GameManager.Instance.AddTrust(5f); // Example: Increase trust by 10 points on first interaction
+                        GameManager.Instance.AddTrust(2f); // Example: Increase trust by 10 points on first interaction
                     }
                     // Trigger dialogue for NPC 5
                     if (GameManager.Instance.GetTrust() < 30f)
