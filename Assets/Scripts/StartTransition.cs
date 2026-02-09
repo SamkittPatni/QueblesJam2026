@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StartTransition : MonoBehaviour
 {
@@ -29,6 +30,6 @@ public class StartTransition : MonoBehaviour
     public void ReturnToMainMenu()
     {
         // Load the main menu scene (assuming it's indexed at 0)
-        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+        SceneManager.LoadScene(0);
     }
 }
