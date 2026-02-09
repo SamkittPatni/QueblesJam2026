@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\HungryCatInput.cs" />
     <Compile Include="Assets\Scripts\SkipCutscene.cs" />
+    <Compile Include="Assets\Scripts\WeekTransitionManager.cs" />
     <Compile Include="Assets\Scripts\PlayerInteractMaze.cs" />
     <Compile Include="Assets\Scripts\MazeManager.cs" />
     <Compile Include="Assets\Scripts\StartTransition.cs" />

@@ -117,6 +117,11 @@ public class GameManager : MonoBehaviour
             NPC4Interacted = false;
             NPC5Interacted = false;
             
+            if (week < 4)
+            {
+                pauseTimer = true; // Pause the timer during the week transition
+                SceneManager.LoadScene(12); // Load week transition scene
+            }
         }
 
         if (week == 4)
