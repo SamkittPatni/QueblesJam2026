@@ -199,16 +199,19 @@ public class GameManager : MonoBehaviour
     {
         pauseTimer = true; // Pause the timer during the ending scene transition
         week = 1; // Reset week for potential replayability
-        if (trust < 30f)
+        if (trust < 50f)
         {
+            trust = 0f; // Reset trust for potential replayability
             SceneManager.LoadScene(8); // Load bad ending scene
         }
-        else if (trust >= 30f && trust < 60f)
+        else if (trust >= 50f && trust < 95f)
         {
+            trust = 0f; // Reset trust for potential replayability
             SceneManager.LoadScene(9); // Load neutral ending scene
         }
-        else if (trust == 100f)
+        else if (trust >= 95f)
         {
+            trust = 0f; // Reset trust for potential replayability
             SceneManager.LoadScene(10); // Load good ending scene
         }
     }
