@@ -17,7 +17,7 @@ public class TransitionManager : MonoBehaviour
         
     }
 
-    void OnSubmit()
+    public void OnSubmit()
     {
         FindAnyObjectByType<PlayerInput>().gameObject.SetActive(false);
         SceneManager.LoadScene(sceneToLoad); // Load the specified scene
