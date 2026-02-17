@@ -22,4 +22,9 @@ public class TransitionManager : MonoBehaviour
         FindAnyObjectByType<PlayerInput>().gameObject.SetActive(false);
         SceneManager.LoadScene(sceneToLoad); // Load the specified scene
     }
+
+    public void OnSkip()
+    {
+        GameManager.Instance.SkipWeek();
+    }
 }

@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 public class UIUpdate : MonoBehaviour
@@ -9,12 +10,15 @@ public class UIUpdate : MonoBehaviour
 
     private Label tunaCountLabel;
     private Label todoListLabel;
+
+    UIDocument uiDocument;
     void Start()
     {
-        UIDocument uiDocument = GetComponent<UIDocument>();
+        uiDocument = GetComponent<UIDocument>();
 
         // Get the root of the visual tree
         VisualElement root = uiDocument.rootVisualElement;
+        root.pickingMode = PickingMode.Ignore;
 
         // Find element by name
         timerLabel = root.Q<Label>("TimerDisplay");
@@ -29,6 +33,18 @@ public class UIUpdate : MonoBehaviour
         // Assign trust value to progress bar
         // TODO: change assigning value to {trust} variable
         trustBar.value = GameManager.Instance.GetTrust();
+    }
+
+    void LateUpdate()
+    {
+        if (uiDocument == null)
+            return;
+
+        var pr = GameObject.Find("PanelSettings");
+        if (pr != null)
+        {
+            pr.GetComponent<PanelRaycaster>().enabled = false;
+        }
     }
 
     // Update is called once per frame

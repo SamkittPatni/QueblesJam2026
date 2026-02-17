@@ -215,4 +215,24 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene(10); // Load good ending scene
         }
     }
+
+    public void SkipWeek()
+    {
+        startTime = 0f;
+        week++;
+        pauseTimer = false; // Reset pause state for the new week
+        playedMinigame = false; // Reset minigame state for the new week
+
+        NPC1Interacted = false;
+        NPC2Interacted = false;
+        NPC3Interacted = false;
+        NPC4Interacted = false;
+        NPC5Interacted = false;
+        
+        if (week < 4)
+        {
+            pauseTimer = true; // Pause the timer during the week transition
+            SceneManager.LoadScene(12); // Load week transition scene
+        }
+    }
 }
